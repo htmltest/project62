@@ -108,7 +108,7 @@
             e.preventDefault();
         });
 
-        $('.messages-contacts .dashboard-summ-list a').click(function(e) {
+        $('.messages-contacts .dashboard-summ-list-preview a').click(function(e) {
             $('.messages').addClass('open');
             e.preventDefault();
         });
@@ -117,6 +117,8 @@
             $('.messages').removeClass('open');
             e.preventDefault();
         });
+
+        $('.messages-container .form-input textarea').autoresize();
 
     });
 

@@ -334,20 +334,23 @@ p.news-date {font:21px/21px MinionPro, serif; color:#3befe3; margin:20px 0 40px 
 }
 
 .dashboard-summ-list {margin:16px -30px 23px -30px}
-.dashboard-summ-list a {display:block; text-decoration:none; padding:0 30px 0 25px; border-left:5px solid transparent}
-.dashboard-summ-list a.new {border-left-color:#3befe3; background:rgba(255, 255, 255, .05)}
+.dashboard-summ-list-item-wrap {padding:0 30px 0 25px; border-left:5px solid transparent}
+.dashboard-summ-list-item-wrap.new {border-left-color:#3befe3; background:rgba(255, 255, 255, .05)}
 .dashboard-summ-list-item {border-top:1px solid rgba(0, 144, 174, .1); padding:12px 0}
 .dashboard-summ-list-item:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.dashboard-summ-list a:first-child .dashboard-summ-list-item {border-top:none}
+.dashboard-summ-list .dashboard-summ-list-item-wrap:first-child .dashboard-summ-list-item {border-top:none}
 .dashboard-summ-list-photo {float:left; vertical-align:top; line-height:0; width:55px}
 .dashboard-summ-list-photo img {border-radius:28px}
 .dashboard-summ-list-date {float:right; text-align:right; color:#3befe3; padding:7px 0 0 0}
 .dashboard-summ-list-date-day {font:16px/20px MinionPro, serif}
 .dashboard-summ-list-date-new {color:#fff}
 .dashboard-summ-list-text {margin:0 80px 0 72px; vertical-align:top; white-space:nowrap; padding:7px 0 0 0}
-.dashboard-summ-list-name {position:relative; width:100%; overflow:hidden; text-overflow:ellipsis; color:#fff; font-size:16px; transition:all .3s ease}
-.dashboard-summ-list a:hover .dashboard-summ-list-name {color:#cae5f1; text-decoration:underline}
+.dashboard-summ-list-name {position:relative; width:100%; overflow:hidden; text-overflow:ellipsis; color:#fff; font-size:16px}
+.dashboard-summ-list-name a {color:#fff}
+.dashboard-summ-list-name a:hover {color:#cae5f1; text-decoration:underline}
 .dashboard-summ-list-preview {position:relative; width:100%; overflow:hidden; text-overflow:ellipsis; color:#cae5f1}
+.dashboard-summ-list-preview a {color:#cae5f1}
+.dashboard-summ-list-preview a:hover {text-decoration:underline}
 .dashboard-summ-list-messages-icon {display:block; text-decoration:none; width:41px; height:41px; background:url(../images/messages-icon.png); position:relative}
 .dashboard-summ-list-messages-icon span {position:absolute; left:-3px; top:-3px; width:20px; height:20px; background:#3befe3; font:12px/20px MinionPro, serif; text-align:center; color:#2b6c96; border-radius:10px}
 
@@ -881,12 +884,14 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .messages-contacts .dashboard-summ-list-name {font:16px/20px MinionPro, serif}
 
 @media (min-width:1200px) {
-    .messages-contacts .dashboard-summ-list a.active {background:#fff; color:#01426a; position:relative}
-    .messages-contacts .dashboard-summ-list a.active:after {content:""; display:block; width:0; height:0; position:absolute; left:100%; top:0; border-left:15px solid #fff; border-top:40px solid transparent; border-bottom:40px solid transparent}
-    .messages-contacts .dashboard-summ-list a.active .dashboard-summ-list-name {color:#01426a}
-    .messages-contacts .dashboard-summ-list a.active .dashboard-summ-list-preview {color:#777}
-    .messages-contacts .dashboard-summ-list a.active .dashboard-summ-list-date {color:#00beb1}
-    .messages-contacts .dashboard-summ-list a.active .dashboard-summ-list-date-new {color:#00beb1}
+    .messages-contacts .dashboard-summ-list .dashboard-summ-list-item-wrap.active {background:#fff; color:#01426a; position:relative}
+    .messages-contacts .dashboard-summ-list .dashboard-summ-list-item-wrap.active:after {content:""; display:block; width:0; height:0; position:absolute; left:100%; top:0; border-left:15px solid #fff; border-top:40px solid transparent; border-bottom:40px solid transparent}
+    .messages-contacts .dashboard-summ-list .dashboard-summ-list-item-wrap.active .dashboard-summ-list-name {color:#01426a}
+    .messages-contacts .dashboard-summ-list .dashboard-summ-list-item-wrap.active .dashboard-summ-list-name a {color:#01426a}
+    .messages-contacts .dashboard-summ-list .dashboard-summ-list-item-wrap.active .dashboard-summ-list-preview {color:#777}
+    .messages-contacts .dashboard-summ-list .dashboard-summ-list-item-wrap.active .dashboard-summ-list-preview a {color:#777}
+    .messages-contacts .dashboard-summ-list .dashboard-summ-list-item-wrap.active .dashboard-summ-list-date {color:#00beb1}
+    .messages-contacts .dashboard-summ-list .dashboard-summ-list-item-wrap.active .dashboard-summ-list-date-new {color:#00beb1}
 }
 
 .messages-container {float:right; width:61%; padding:29px 10px 31px 0; box-sizing:border-box}
@@ -910,8 +915,8 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .messages-container form {margin:30px 90px 0 20px; padding:0; background:none}
 .messages-container form:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .messages-container .form-input {float:left; width:100%; padding:0 127px 0 0; box-sizing:border-box}
-.messages-container .form-input textarea {border-right:none; border-radius:20px 0 0 20px; height:40px}
-.messages-container .form-submit {float:left; width:127px; margin:0 0 0 -127px; position:relative}
+.messages-container .form-input textarea {border-radius:20px 0 0 20px; height:40px; transition:none}
+.messages-container .form-submit {float:left; width:127px; margin:0 0 0 -128px; position:relative}
 .messages-container .form-submit input {border-left:none; border-radius:0 20px 20px 0; background:rgba(255, 255, 255, .2)}
 .messages-container .form-submit input:hover {background:#fff; color:#01426a}
 
