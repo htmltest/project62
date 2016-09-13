@@ -344,7 +344,7 @@ p.news-date {font:21px/21px MinionPro, serif; color:#3befe3; margin:20px 0 40px 
 .dashboard-summ-list-date {float:right; text-align:right; color:#3befe3; padding:7px 0 0 0}
 .dashboard-summ-list-date-day {font:16px/20px MinionPro, serif}
 .dashboard-summ-list-date-new {color:#fff}
-.dashboard-summ-list-text {margin:0 80px 0 72px; vertical-align:top; white-space:nowrap; padding:7px 0 0 0}
+.dashboard-summ-list-text {margin:0 110px 0 72px; vertical-align:top; white-space:nowrap; padding:7px 0 0 0}
 .dashboard-summ-list-name {position:relative; width:100%; overflow:hidden; text-overflow:ellipsis; color:#fff; font-size:16px}
 .dashboard-summ-list-name a {color:#fff}
 .dashboard-summ-list-name a:hover {color:#cae5f1; text-decoration:underline}
