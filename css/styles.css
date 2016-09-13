@@ -336,6 +336,7 @@ p.news-date {font:21px/21px MinionPro, serif; color:#3befe3; margin:20px 0 40px 
 .dashboard-summ-list {margin:16px -30px 23px -30px}
 .dashboard-summ-list-item-wrap {padding:0 30px 0 25px; border-left:5px solid transparent}
 .dashboard-summ-list-item-wrap.new {border-left-color:#3befe3; background:rgba(255, 255, 255, .05)}
+a.dashboard-summ-list-item-wrap {display:block; text-decoration:none}
 .dashboard-summ-list-item {border-top:1px solid rgba(0, 144, 174, .1); padding:12px 0}
 .dashboard-summ-list-item:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .dashboard-summ-list .dashboard-summ-list-item-wrap:first-child .dashboard-summ-list-item {border-top:none}
@@ -346,8 +347,10 @@ p.news-date {font:21px/21px MinionPro, serif; color:#3befe3; margin:20px 0 40px 
 .dashboard-summ-list-date-new {color:#fff}
 .dashboard-summ-list-text {margin:0 110px 0 72px; vertical-align:top; white-space:nowrap; padding:7px 0 0 0}
 .dashboard-summ-list-name {position:relative; width:100%; overflow:hidden; text-overflow:ellipsis; color:#fff; font-size:16px}
+a.dashboard-summ-list-item-wrap .dashboard-summ-list-name {transition:color .3s ease}
 .dashboard-summ-list-name a {color:#fff}
 .dashboard-summ-list-name a:hover {color:#cae5f1; text-decoration:underline}
+a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; text-decoration:underline}
 .dashboard-summ-list-preview {position:relative; width:100%; overflow:hidden; text-overflow:ellipsis; color:#cae5f1}
 .dashboard-summ-list-preview a {color:#cae5f1}
 .dashboard-summ-list-preview a:hover {text-decoration:underline}
