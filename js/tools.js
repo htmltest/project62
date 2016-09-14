@@ -118,7 +118,20 @@
             e.preventDefault();
         });
 
-        $('.messages-container .form-input textarea').autoresize();
+        var curTextAreaHeight = $('.messages-container .form-input textarea').height();
+        $('.messages-container .form-input textarea').autoresize({
+            onResize: function() {
+                if ($('.messages-container .form-input textarea').height() > curTextAreaHeight) {
+                    $('.messages-container .form-input textarea').addClass('active');
+                } else {
+                    $('.messages-container .form-input textarea').removeClass('active');
+                }
+            }
+        });
+
+        $('.profile-photo .reload input').change(function() {
+            $('.profile-photo .loading').show();
+        });
 
     });
 

@@ -844,7 +844,7 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .profile-info dt {float:left; clear:left; font:14px/20px MinionPro, serif; color:#fff; width:100px; margin:0; padding:0 0 20px 0}
 .profile-info dd {margin:0 0 0 124px; padding:0 0 20px 0}
 .profile-info dd p:first-child {margin-top:0}
-.profile-photo {float:right; line-height:0; width:38%; padding:12px 0 0 0; position:relative}
+.profile-photo {float:right; line-height:0; width:38%; margin:12px 0 0 0; position:relative}
 .profile-photo img {width:100%}
 .profile-post {margin:-20px 0 30px 0}
 
@@ -879,6 +879,8 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 
 .reload {width:40px; height:40px; position:absolute; right:10px; bottom:10px; background:url(../images/reload.png); overflow:hidden}
 .reload input {height:200px; position:absolute; top:0; right:0; opacity:0; cursor:pointer; font-size:200px; background:url(../images/blank.gif); -webkit-appearance:none}
+
+.loading {display:none; position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, .5) url(../images/loading.svg) no-repeat center}
 
 .messages {padding:0; max-width:1170px}
 .messages:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -919,6 +921,7 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .messages-container form:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .messages-container .form-input {float:left; width:100%; padding:0 127px 0 0; box-sizing:border-box}
 .messages-container .form-input textarea {border-radius:20px 0 0 20px; height:40px; transition:none}
+.messages-container .form-input textarea.active {border-radius:20px 0 20px 20px}
 .messages-container .form-submit {float:left; width:127px; margin:0 0 0 -128px; position:relative}
 .messages-container .form-submit input {border-left:none; border-radius:0 20px 20px 0; background:rgba(255, 255, 255, .2)}
 .messages-container .form-submit input:hover {background:#fff; color:#01426a}
