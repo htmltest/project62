@@ -142,7 +142,17 @@
             if ($(e.target).parents().filter('.menu-add').length == 0) {
                 $('.menu-add').removeClass('open');
             }
-        })
+        });
+
+        $('.webresourses-tabs-current').click(function() {
+            $('.webresourses-tabs').toggleClass('open');
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.webresourses-tabs').length == 0) {
+                $('.webresourses-tabs').removeClass('open');
+            }
+        });
 
     });
 

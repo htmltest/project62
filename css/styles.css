@@ -1023,16 +1023,36 @@ h1+.btn-edit {margin:-8px 0 0 52px}
     .form-file-add {width:175px; height:72px; padding:103px 0 0 0; background-position:center 74px}
 }
 
-.webresourses-tabs {text-transform:uppercase; font:14px/20px MinionPro, serif; margin:0 0 0 -22px; padding:8px 0 0 0}
-.webresourses-tabs:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.webresourses-tabs {position:relative; text-transform:uppercase; font:14px/20px MinionPro, serif}
+.webresourses-tabs ul {margin:0 0 0 -22px; padding:8px 0 0 0}
+.webresourses-tabs ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .webresourses-tabs li {float:left; margin:0 0 0 20px; padding:0}
 .webresourses-tabs li:before {display:none}
 .webresourses-tabs li a {color:rgba(255, 255, 255, .5); text-decoration:none; float:left; padding:5px 2px 1px 2px; transition:all .5 ease; border-bottom:3px solid transparent}
 .webresourses-tabs li.active a,
 .webresourses-tabs li a:hover {border-bottom-color:#1ab2d2; color:#fff}
+.webresourses-tabs-current {display:none}
+
+@media (max-width:1199px) {
+    .webresourses-tabs-current {display:block; position:relative; padding:0 0 0 19px; height:38px; border:1px solid rgba(255, 255, 255, .25); border-radius:20px; line-height:38px; color:#fff; cursor:pointer}
+    .webresourses-tabs.open .webresourses-tabs-current {border-radius:20px 20px 0 0}
+    .webresourses-tabs-current:after {content:""; display:block; width:15px; height:9px; background:url(../images/arrow.png); position:absolute; right:18px; top:15px}
+    .webresourses-tabs ul {display:none; position:absolute; left:0; top:100%; margin:0; padding:0; width:100%; border:1px solid rgba(255, 255, 255, .25); background:#3b434e; border-top:0; border-radius:0 0 20px 20px; z-index:999; box-sizing:border-box}
+    .webresourses-tabs.open ul {display:block}
+    .webresourses-tabs ul li a {float:none; display:block; padding:10px 19px; border-bottom:none; color:#cae5f1}
+    .webresourses-tabs ul li {float:none; margin:0; padding:0; border-top:1px solid #5b626c}
+    .webresourses-tabs ul li.active {display:none}
+    .webresourses-tabs ul li a:hover {background:#4e555f; color:#fff}
+    .webresourses-tabs ul li:last-child a {border-radius:0 0 20px 20px}
+}
 
 .webresourses-container {display:table; width:100%; margin:41px 0 15px 0}
 .webresourses-content {display:table-cell; vertical-align:top; padding:0 15px 0 0; width:70.62%; box-sizing:border-box; color:#fff; font:16px/20px MinionPro, serif}
 .webresourses-content a {font:14px/20px Roboto, sans-serif; color:#3befe3}
 .webresourses-icon {display:table-cell; width:29.38%; padding:0 0 0 15px; line-height:0; box-sizing:border-box}
 .webresourses-icon img {width:100%}
+
+@media (max-width:1199px) {
+    .webresourses-content {display:block; padding:0; width:auto}
+    .webresourses-icon {display:none}
+}
