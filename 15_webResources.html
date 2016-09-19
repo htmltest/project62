@@ -23,7 +23,7 @@
         <meta name="viewport" content="width=device-width" />
     </head>
 
-    <body>
+    <body class="page-media">
 
         <!-- wrapper -->
         <div class="wrapper">
@@ -37,7 +37,7 @@
                             <ul>
                                 <li><a href="#">Сотрудники,<br />телефоны</a></li>
                                 <li><a href="#">Организационная<br />структура</a></li>
-                                <li><a href="#">Материалы, веб-ресурсы,<br />медиа-архив</a></li>
+                                <li class="active"><a href="#">Материалы, веб-ресурсы,<br />медиа-архив</a></li>
                             </ul>
                         </nav>
                         <div class="menu-add">
@@ -56,9 +56,9 @@
                                 <li><a href="#"><span><img src="images/menu-icon-1.png" alt="" width="26" height="33" /></span>новости</a></li>
                                 <li><a href="#"><span><img src="images/menu-icon-2.png" alt="" width="33" height="30" /></span>Сотрудники, телефоны</a></li>
                                 <li><a href="#"><span><img src="images/menu-icon-3.png" alt="" width="40" height="31" /></span>Организационная структура</a></li>
-                                <li><a href="#"><span><img src="images/menu-icon-4.png" alt="" width="36" height="31" /></span>Материалы, веб-ресурсы, медиа-архив</a></li>
+                                <li class="active"><a href="#"><span><img src="images/menu-icon-4.png" alt="" width="36" height="31" /></span>Материалы, веб-ресурсы, медиа-архив</a></li>
                                 <li><a href="#"><span><img src="images/menu-icon-5.png" alt="" width="27" height="30" /></span>Заявки в сервисные службы</a></li>
-                                <li class="active"><a href="#"><span><img src="images/menu-icon-6.png" alt="" width="29" height="29" /></span>Анкетирование</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-6.png" alt="" width="29" height="29" /></span>Анкетирование</a></li>
                                 <li><a href="#"><span><img src="images/menu-icon-7.png" alt="" width="34" height="30" /></span>Доска объявлений</a></li>
                             </ul>
                         </div>
@@ -68,36 +68,45 @@
                     </div>
                 </header>
 
-                <!-- employees -->
-                <div class="employees">
+                <div class="tabs">
+                    <ul>
+                        <li><a href="#">Материалы</a></li>
+                        <li class="active"><a href="#">Веб-ресурсы</a></li>
+                        <li><a href="#">Медиа-архив</a></li>
+                    </ul>
+                </div>
 
-                    <!-- employees header -->
-                    <div class="employees-header">
-                        <h1>Анкетирование</h1>
-                    </div>
-                    <!-- employees header END -->
+                <!-- content -->
+                <div class="content">
 
-                    <!-- content -->
-                    <div class="content questioning">
-                        <h2>Тест на рабочий стресс</h2>
-                        <blockquote>
-                            Спасибо за участие!
-                            <div class="blockquote-author-post">Общая статистика по данной анкете будет показана на портале после общего окончания анкетирования</div>
-                        </blockquote>
-                    </div>
-                    <!-- content END -->
+                    <h1>Веб-ресурсы</h1>
 
-                    <!-- content -->
-                    <div class="content questioning">
-                        <h2>Ранее прошедшие анкеты</h2>
-                        <p><a href="#">Синхронизирует рыночный презентационный материал</a><br />12 апреля 2016</p>
-                        <p><a href="#">Медиамикс довольно хорошо сбалансирован. Экспертиза выполненного проекта, на первый взгляд, специфицирует рейтинг, используя опыт предыдущих кампаний</a><br />12 апреля 2016</p>
-                        <p><a href="#">Стимулирование сбыта притягивает потребительский повторный контакт</a><br />12 апреля 2016</p>
+                    <ul class="webresourses-tabs">
+                        <li class="active"><a href="#">Девелопмент</a></li>
+                        <li><a href="#">Финансы</a></li>
+                        <li><a href="#">Рестораны</a></li>
+                        <li><a href="#">Строительство</a></li>
+                        <li><a href="#">Энергетика</a></li>
+                        <li><a href="#">Ритейл</a></li>
+                        <li><a href="#">Развлечения</a></li>
+                        <li><a href="#">Рестораны</a></li>
+                        <li><a href="#">Другие</a></li>
+                    </ul>
+
+                    <div class="webresourses-container">
+                        <div class="webresourses-content">
+                            <p>ТРЦ «РИО» – <a href="#">http://tashir.ru/business-activities/development/brands/#rio</a></p>
+                            <p>ТРЦ Avenue south-west – <a href="#">http://tashir.ru/business-activities/development/brands/#avenue</a></p>
+                            <p>ТРЦ «Райкин Плаза» – <a href="#">http://tashir.ru/business-activities/development/brands/#raikin</a></p>
+                            <p>Торговая галерея «Гранд Марина» – <a href="#">http://tashir.ru/business-activities/development/brands</a></p>
+                            <p>Федеральная сеть отелей SK Royal – <a href="#">http://tashir.ru/business-activities/development/brands/#sk-royal</a></p>
+                            <p>ТЦ «Ереван плаза» – <a href="#">http://erevanplaza.ru/ru</a></p>
+                        </div>
+                        <div class="webresourses-icon"><img src="images/webresources-icon-1.png" alt="" /></div>
                     </div>
-                    <!-- content END -->
 
                 </div>
-                <!-- employees END -->
+                <!-- content END -->
 
             </div>
             <!-- wrapper inner END -->

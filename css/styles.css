@@ -187,8 +187,18 @@ nav ul li a:hover {border-bottom-color:#0090ae}
     nav {display:none}
 }
 
-.menu-add {float:left; padding:28px 0 0 30px}
-.menu-add-link {display:block; width:30px; height:23px; background:url(../images/menu-link.png)}
+.menu-add {float:left; position:relative; margin:0 0 0 8px}
+.menu-add-link {display:block; width:90px; height:80px; position:relative}
+.menu-add-link:after {content:""; display:block; position:absolute; left:50%; top:50%; margin:-12px 0 0 -15px; width:30px; height:23px; background:url(../images/menu-link.png)}
+.menu-add.open .menu-add-link {background:#fff}
+.menu-add.open .menu-add-link:after {background-position:left -46px}
+.menu-add ul {display:none; position:absolute; right:0; top:100%; background:#fff; z-index:99; text-transform:uppercase; font:13px/20px MinionPro, sans-serif; margin:0; white-space:nowrap}
+.menu-add.open ul {display:block}
+.menu-add ul li {margin:0; padding:21px 30px 18px 30px; border-top:1px solid #f2f2f2}
+.menu-add ul li:first-child {border-top:none}
+.menu-add ul li:before {display:none}
+.menu-add ul li a {color:#01426a; text-decoration:none}
+.menu-add ul li a:hover {text-decoration:underline}
 
 @media (max-width:1199px) {
     .menu-add {display:none}
@@ -1012,3 +1022,17 @@ h1+.btn-edit {margin:-8px 0 0 52px}
     .form-file {width:175px; height:175px}
     .form-file-add {width:175px; height:72px; padding:103px 0 0 0; background-position:center 74px}
 }
+
+.webresourses-tabs {text-transform:uppercase; font:14px/20px MinionPro, serif; margin:0 0 0 -22px; padding:8px 0 0 0}
+.webresourses-tabs:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.webresourses-tabs li {float:left; margin:0 0 0 20px; padding:0}
+.webresourses-tabs li:before {display:none}
+.webresourses-tabs li a {color:rgba(255, 255, 255, .5); text-decoration:none; float:left; padding:5px 2px 1px 2px; transition:all .5 ease; border-bottom:3px solid transparent}
+.webresourses-tabs li.active a,
+.webresourses-tabs li a:hover {border-bottom-color:#1ab2d2; color:#fff}
+
+.webresourses-container {display:table; width:100%; margin:41px 0 15px 0}
+.webresourses-content {display:table-cell; vertical-align:top; padding:0 15px 0 0; width:70.62%; box-sizing:border-box; color:#fff; font:16px/20px MinionPro, serif}
+.webresourses-content a {font:14px/20px Roboto, sans-serif; color:#3befe3}
+.webresourses-icon {display:table-cell; width:29.38%; padding:0 0 0 15px; line-height:0; box-sizing:border-box}
+.webresourses-icon img {width:100%}

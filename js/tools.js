@@ -133,6 +133,17 @@
             $('.profile-photo .loading').show();
         });
 
+        $('.menu-add-link').click(function(e) {
+            $('.menu-add').toggleClass('open');
+            e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.menu-add').length == 0) {
+                $('.menu-add').removeClass('open');
+            }
+        })
+
     });
 
     $(window).resize(function() {
