@@ -154,6 +154,18 @@
             }
         });
 
+        $('.webresourses-tabs li a').click(function(e) {
+            var curLi = $(this).parent();
+            $('.webresourses-tabs li.active').removeClass('active');
+            curLi.addClass('active');
+            var curIndex = $('.webresourses-tabs li').index(curLi);
+            $('.webresourses-tabs').removeClass('open');
+            $('.webresourses-tabs-current').html($(this).html());
+            $('.webresourses-tabs-content.active').removeClass('active');
+            $('.webresourses-tabs-content').eq(curIndex).addClass('active');
+            e.preventDefault();
+        });
+
     });
 
     $(window).resize(function() {

@@ -1056,3 +1056,6 @@ h1+.btn-edit {margin:-8px 0 0 52px}
     .webresourses-content {display:block; padding:0; width:auto}
     .webresourses-icon {display:none}
 }
+
+.webresourses-tabs-content {display:none}
+.webresourses-tabs-content.active {display:block}
