@@ -42,6 +42,33 @@
             }
         });
 
+        $('.media-item a').fancybox({
+            prevEffect: 'none',
+            nextEffect: 'none',
+            helpers: {
+                media: true,
+                title: {
+                    type: 'outside',
+                    position: 'top'
+                },
+                thumbs: {
+                    width: 86,
+                    height: 58,
+                    source: function(current) {
+                        return $(current.element).data('thumbnail');
+                    }
+                }
+            },
+            tpl: {
+                closeBtn : '<a title="Закрыть" class="fancybox-item fancybox-close" href="javascript:;"></a>',
+                next     : '<a title="Следующая" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+                prev     : '<a title="Предыдущая" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+            },
+            padding: 0,
+            margin: [100, 20, 40, 20],
+            beforeShow: function() { this.title += '<div class="fancybox-title-date">' + $(this.element).data('date') + '</div>'}
+        });
+
         $('.media-more').click(function(e) {
             $.ajax({
                 url: $(this).attr('href'),
