@@ -65,7 +65,9 @@
                 prev     : '<a title="Предыдущая" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
             },
             padding: 0,
-            margin: [100, 20, 40, 20],
+            margin: [30, 20, 40, 20],
+            autoSize: false,
+            topRatio: 0,
             beforeShow: function() { this.title += '<div class="fancybox-title-date">' + $(this.element).data('date') + '</div>'}
         });
 
