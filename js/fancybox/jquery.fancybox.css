@@ -38,12 +38,10 @@
 .fancybox-opened .fancybox-skin {
 }
 
-.fancybox-outer, .fancybox-inner {
-	position: relative;
-}
-
 .fancybox-inner {
+	position: relative;
 	overflow: hidden;
+    text-align: center;
 }
 
 .fancybox-type-iframe .fancybox-inner {
@@ -59,9 +57,13 @@
 }
 
 .fancybox-image, .fancybox-iframe {
-	display: block;
-	width: 100%;
-	height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.fancybox-iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .fancybox-image {
@@ -94,7 +96,7 @@
 .fancybox-close {
 	position: absolute;
 	top: -73px;
-	right: 0px;
+	right: 0;
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
@@ -203,7 +205,6 @@
     color: #fff;
     text-transform: uppercase;
     padding: 0 0 42px 0;
-    margin: 0 30px 0 0;
 }
 
 .fancybox-opened .fancybox-title {

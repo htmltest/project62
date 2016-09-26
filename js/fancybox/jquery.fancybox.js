@@ -1361,7 +1361,19 @@
 				width += scrollOut;
 			}
 
-			inner.width( width ).height( height );
+            if (width < maxWidth_) {
+                if (maxWidth_ > 970) {
+                    width = 970;
+                } else {
+                    width = maxWidth_;
+                }
+            }
+
+            if (height < maxHeight_ - 100) {
+                height = maxHeight_ - 100;
+            }
+
+			inner.width( width ).height( height ).css({'line-height' : height + 'px'});
 
 			wrap.width( width + wPadding );
 
