@@ -1,15 +1,15 @@
 @font-face {font-family:"MinionPro"; src:url("../fonts/MinionPro.woff") format("woff"); font-weight:normal; font-style:normal}
 
-html {min-width:320px; height:100%}
+html {min-width:480px; height:100%}
 
 @media (max-width:1199px) {
-    .menu-mobile-open {overflow:hidden; position:relative}
+    .menu-mobile-open {overflow:hidden; height:auto; position:relative}
 }
 
-body {min-width:320px; height:100%; margin:0; padding:0; font:14px/20px Roboto, sans-serif; color:#cae5f1; background:#18232f}
+body {min-width:480px; height:100%; margin:0; padding:0; font:14px/20px Roboto, sans-serif; color:#cae5f1; background:#18232f}
 
 @media (max-width:1199px) {
-    .menu-mobile-open body {overflow:hidden; position:relative}
+    .menu-mobile-open body {overflow:hidden; height:auto; position:relative}
     .menu-mobile-open body:after {content:""; display:block; width:100%; height:100%; position:absolute; left:0; top:0; z-index:97; background:#506c91 url(../images/menu-mobile-bg.jpg) no-repeat center top; background-size:cover}
 }
 
@@ -135,7 +135,7 @@ form {margin:32px 0; padding:20px 100px; background:rgba(255, 255, 255, .05)}
 .pager a:hover,
 .pager a.active {border-color:#fff; text-decoration:none}
 
-.wrapper {min-width:320px; width:100%; min-height:100%; position:relative; overflow:hidden; background:url(../images/bg.jpg) no-repeat center top; background-size:100%}
+.wrapper {min-width:480px; width:100%; min-height:100%; position:relative; overflow:hidden; background:url(../images/bg.jpg) no-repeat center top; background-size:100%}
 .wrapper-inner {padding:0 0 120px 0}
 
 @media (max-width:1199px) {
@@ -214,7 +214,7 @@ nav ul li a:hover {border-bottom-color:#0090ae}
 
     .menu-mobile-open .menu-mobile {display:block}
 
-    .menu-mobile {position:absolute; left:0; top:0; width:100%; z-index:98; height:100%; overflow:auto; border-top:99px solid transparent; box-sizing:border-box}
+    .menu-mobile {position:fixed; left:0; top:0; right:0; z-index:98; bottom:0; overflow:auto; border-top:99px solid transparent; box-sizing:border-box}
     .menu-mobile ul {margin:0; font:15px/20px MinionPro, serif; text-transform:uppercase; border-bottom:1px solid rgba(255, 255, 255, .1)}
     .menu-mobile ul li {padding:0; border-top:1px solid rgba(255, 255, 255, .1); margin:0}
     .menu-mobile ul li:before {display:none}
@@ -243,7 +243,7 @@ nav ul li a:hover {border-bottom-color:#0090ae}
 .tabs {max-width:1170px; margin:0 auto}
 .tabs ul {margin:0; font:16px/20px MinionPro, serif; text-transform:uppercase}
 .tabs ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.tabs ul li {float:left; margin:0 0 0 34px; padding:41px 0 13px 0}
+.tabs ul li {float:left; margin:0 0 0 30px; padding:41px 0 13px 0}
 .tabs ul li:first-child {margin:0}
 .tabs ul li:before {display:none}
 .tabs ul li.active {border-bottom:5px solid #1ab2d2}
@@ -355,7 +355,8 @@ a.dashboard-summ-list-item-wrap {display:block; text-decoration:none}
 .dashboard-summ-list-date {float:right; text-align:right; color:#3befe3; padding:7px 0 0 0}
 .dashboard-summ-list-date-day {font:16px/20px MinionPro, serif}
 .dashboard-summ-list-date-new {color:#fff}
-.dashboard-summ-list-text {margin:0 110px 0 72px; vertical-align:top; white-space:nowrap; padding:7px 0 0 0}
+.dashboard-summ-list-text {margin:0 0 0 72px; vertical-align:top; white-space:nowrap; padding:7px 0 0 0}
+.dashboard-summ-list-date+.dashboard-summ-list-text {margin-right:110px}
 .dashboard-summ-list-name {position:relative; width:100%; overflow:hidden; text-overflow:ellipsis; color:#fff; font-size:16px}
 a.dashboard-summ-list-item-wrap .dashboard-summ-list-name {transition:color .3s ease}
 .dashboard-summ-list-name a {color:#fff}
@@ -453,6 +454,9 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
     .dashboard-news-item {float:none; display:inline-block; vertical-align:top; width:100%; padding:0; border:none; font-size:14px; line-height:20px; letter-spacing:0; white-space:normal}
     .dashboard-news-item:first-child {padding-left:0}
     .dashboard-news-item:last-child {padding-right:0}
+    .dashboard-news-item-name {margin:0}
+    .dashboard-news-item-anonce {display:none}
+    .dashboard-news-item-date {margin:0}
 
     .dashboard-news-ctrl {display:block; width:100%; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; margin:-4px 0 0 0}
     .dashboard-news-ctrl a {display:inline-block; vertical-align:top; width:11px; height:11px; background:rgba(255, 255, 255, .25); border-radius:6px; margin:0 0 0 9px}
@@ -488,7 +492,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
     .news-item-date {padding-left:0; padding-right:0}
 }
 
-footer {height:60px; min-width:320px; position:relative; margin-top:-60px; background:#01426a; text-align:center; color:#fefefe; font:10px/60px MinionPro, serif; text-transform:uppercase}
+footer {height:60px; min-width:480px; position:relative; margin-top:-60px; background:#01426a; text-align:center; color:#fefefe; font:10px/60px MinionPro, serif; text-transform:uppercase}
 
 .auth {width:380px; margin:0 auto; padding:41px 0 104px 0}
 
