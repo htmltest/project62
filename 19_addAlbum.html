@@ -90,7 +90,7 @@
 
                     <h1>Добавление альбома</h1>
 
-                    <form action="#" method="post" class="media-add">
+                    <form action="#" method="post" class="media-add" id="fileupload" enctype="multipart/form-data">
                         <div class="form-row">
                             <div class="form-label">Выбор корневой папки</div>
                             <div class="form-field">
@@ -111,13 +111,10 @@
                             <div class="form-label">ЗАгрузка файлов</div>
                             <div class="form-field">
                                 Бизнес-модель, суммируя приведенные примеры, неверно оправдывает медийный канал. Бизнес-план, не меняя концепции, изложенной выше, последовательно масштабирует медийный канал.
+                                <div class="form-files-list files-list files">
+                                </div>
                                 <div class="form-files-list">
-                                    <div class="form-file"><img src="files/form-file-1.jpg" alt="" /><span class="file-success"></span></div>
-                                    <div class="form-file"><img src="files/form-file-2.jpg" alt="" /><span class="file-success"></span></div>
-                                    <div class="form-file"><img src="files/form-file-3.jpg" alt="" /><span class="file-success"></span></div>
-                                    <div class="form-file"><img src="files/form-file-4.jpg" alt="" /><span class="file-success"></span><span class="file-video"></span></div>
-                                    <div class="form-file"><img src="files/form-file-5.jpg" alt="" /><span class="file-error-bg"></span><span class="file-error"></span></div>
-                                    <div class="form-file"><div class="form-file-add">Добавить</div><input type="file" name="file" /></div>
+                                    <div class="form-file"><div class="form-file-add">Добавить</div><input type="file" name="files[]" multiple="multiple" /></div>
                                 </div>
                             </div>
                         </div>
@@ -128,6 +125,48 @@
                             </div>
                         </div>
                     </form>
+
+                    <!-- The template to display files available for upload -->
+                    <script id="template-upload" type="text/x-tmpl">
+                    {% for (var i=0, file; file=o.files[i]; i++) { %}
+                        <div class="form-file template-upload fade">
+                            <span class="preview"></span>
+                            <div class="progress loading"></div>
+                        </div>
+                    {% } %}
+                    </script>
+                    <!-- The template to display files available for download -->
+                    <script id="template-download" type="text/x-tmpl">
+                    {% for (var i=0, file; file=o.files[i]; i++) { %}
+                        <div class="form-file template-download fade">
+                            <img src="{%=file.thumbnailUrl%}" alt="" />
+                            {% if (file.error) { %}
+                            <span class="file-error-bg"></span><span class="file-error" title="{%=file.error%}"></span>
+                            {% } else { %}
+                            <span class="file-success"></span>
+                            {% } %}
+                        </div>
+                    {% } %}
+                    </script>
+
+                    <script src="js/fileupload/jquery.ui.widget.js"></script>
+                    <script src="js/fileupload/blueimp/tmpl.min.js"></script>
+                    <script src="js/fileupload/blueimp/load-image.all.min.js"></script>
+                    <script src="js/fileupload/blueimp/canvas-to-blob.min.js"></script>
+                    <script src="js/fileupload/jquery.iframe-transport.js"></script>
+                    <script src="js/fileupload/jquery.fileupload.js"></script>
+                    <script src="js/fileupload/jquery.fileupload-process.js"></script>
+                    <script src="js/fileupload/jquery.fileupload-image.js"></script>
+                    <script src="js/fileupload/jquery.fileupload-video.js"></script>
+                    <script src="js/fileupload/jquery.fileupload-validate.js"></script>
+                    <script src="js/fileupload/jquery.fileupload-ui.js"></script>
+                    <script>
+                        $('#fileupload').fileupload({
+                            url: 'upload/',
+                            acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+                            autoUpload: true
+                        });
+                    </script>
 
                 </div>
                 <!-- content END -->

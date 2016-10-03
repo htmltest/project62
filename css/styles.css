@@ -1019,12 +1019,11 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .form-file-add {text-align:center; position:relative; width:135px; height:36px; padding:99px 0 0 0; background:rgba(255, 255, 255, .1) url(../images/file-add.png) no-repeat center; font:12px/20px MinionPro, serif; color:#fff; text-transform:uppercase}
 .form-file input {height:200px; position:absolute; top:0; right:0; opacity:0; cursor:pointer; font-size:200px; background:url(../images/blank.gif); -webkit-appearance:none}
 .media-add .form-submit {width:290px; margin:20px 0 0 0}
+.form-file .progress {display:block}
 
 @media (max-width:1199px) {
     .media-add {margin:0; width:100%}
     .media-add .form-submit {width:100%; margin:-20px 0 0 0}
-    .form-file {width:175px; height:175px}
-    .form-file-add {width:175px; height:72px; padding:103px 0 0 0; background-position:center 74px}
 }
 
 .webresourses-tabs {position:relative; text-transform:uppercase; font:14px/20px MinionPro, serif}
