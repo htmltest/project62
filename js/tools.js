@@ -6,6 +6,38 @@
             initForm($(this));
         });
 
+        $('.search-input input').focus(function() {
+            $('.search').addClass('focus');
+        });
+
+        $('.search-input input').blur(function() {
+            if ($(this).val() == '') {
+                $('.search').removeClass('focus');
+            }
+        });
+
+        $('.search-close').click(function(e) {
+            $('.search-input input').val('').blur();
+            e.preventDefault();
+        });
+
+        $('.search-input input').on('keyup', function() {
+            if ($(this).val() != '') {
+                $.ajax({
+                    type: 'POST',
+                    url: $('.search form').attr('action'),
+                    data: $('.search form').serialize(),
+                    dataType: 'html',
+                    cache: false
+                }).done(function(html) {
+                    $('.search-results-list').html(html);
+                });
+            } else {
+                $('.search-results-list').html('');
+            }
+            e.preventDefault();
+        });
+
         $('.dashboard-activity-wrap').jScrollPane({
             autoReinitialise: true
         });
@@ -193,6 +225,35 @@
             $('.webresourses-tabs-content').eq(curIndex).addClass('active');
             e.preventDefault();
         });
+
+        $('.dashboard .dashboard-news-menu a').click(function(e) {
+            var curLi = $(this).parent();
+            if (!curLi.hasClass('active')) {
+                $('.dashboard .dashboard-news-menu li.active').removeClass('active');
+                curLi.addClass('active');
+                var curIndex = $('.dashboard .dashboard-news-menu li').index(curLi);
+                $('.dashboard .news-list.active').removeClass('active');
+                $('.dashboard .news-list').eq(curIndex).addClass('active');
+            }
+            e.preventDefault();
+        });
+
+        $('.contractors-filter-group-title a').click(function(e) {
+            $(this).parent().parent().toggleClass('open');
+            e.preventDefault();
+        });
+
+        $('.contractors-filter-group-title input').change(function() {
+            var curInput = $(this);
+            var curGroup = curInput.parents().filter('.contractors-filter-group');
+            if (curInput.prop('checked')) {
+                curGroup.addClass('checked');
+            } else {
+                curGroup.removeClass('checked');
+            }
+        });
+
+        $('.contractors-filter-group-title input:checked').parents().filter('.contractors-filter-group').addClass('checked');
 
     });
 

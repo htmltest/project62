@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Tashir</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,700,700italic&amp;subset=latin,cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" />
+        <link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-thumbs.css" />
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/jquery.textarea.autoresize.js"></script>
+        <script src="js/fancybox/jquery.fancybox.js"></script>
+        <script src="js/fancybox/helpers/jquery.fancybox-media.js"></script>
+        <script src="js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="header-inner">
+                        <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="206" height="53" /></a></div>
+
+                        <nav>
+                            <ul>
+                                <li><a href="#">Сотрудники,<br />телефоны</a></li>
+                                <li><a href="#">Организационная<br />структура</a></li>
+                                <li><a href="#">Материалы, веб-ресурсы,<br />медиа-архив</a></li>
+                                <li class="active"><a href="#">Каталог<br />подрядчиков</a></li>
+                            </ul>
+                        </nav>
+                        <div class="menu-add">
+                            <a href="#" class="menu-add-link"></a>
+                            <ul>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">ЗАявки в Сервисные службы</a></li>
+                                <li><a href="#">Анкетирование</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="menu-mobile-link"></a>
+
+                        <div class="menu-mobile">
+                            <ul>
+                                <li><a href="#"><span><img src="images/menu-icon-1.png" alt="" width="26" height="33" /></span>новости</a></li>
+                                <li class="active"><a href="#"><span><img src="images/menu-icon-2.png" alt="" width="33" height="30" /></span>Сотрудники, телефоны</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-3.png" alt="" width="40" height="31" /></span>Организационная структура</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-4.png" alt="" width="36" height="31" /></span>Материалы, веб-ресурсы, медиа-архив</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-5.png" alt="" width="27" height="30" /></span>Заявки в сервисные службы</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-6.png" alt="" width="29" height="29" /></span>Анкетирование</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-7.png" alt="" width="34" height="30" /></span>Доска объявлений</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-user-menu">
+                            <a href="#" class="header-user-menu-link"><img src="files/avatar.jpg" alt="" width="38" height="38" /></a>
+                            <ul>
+                                <li><a href="#"><span>Профиль</span></a></li>
+                                <li><a href="#"><span>Сообщения</span> <em>5</em></a></li>
+                                <li><a href="#"><span>Выход</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-messages-link"><a href="#"><span>5</span></a></div>
+                    </div>
+                </header>
+
+                <div class="search">
+                    <div class="search-inner">
+                        <form action="#" method="post">
+                            <div class="search-submit"><input type="submit" value="" /></div>
+                            <a href="#" class="search-close"></a>
+                            <div class="search-input"><input type="text" name="search" value="" placeholder="Поиск по Каталогу подрядчиков" class="required" /></div>
+                            <div class="search-results">
+                                <div class="search-results-list"></div>
+                                <div class="search-results-all"><a href="#">Все результаты</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- contractors -->
+                <div class="contractors">
+
+                    <h1>Каталог подрядчиков</h1>
+
+                    <!-- contractors filter -->
+                    <div class="contractors-filter">
+                        <h2>Фильтр</h2>
+                        <form action="#" method="post">
+                            <!-- contractors filter group -->
+                            <div class="contractors-filter-group open">
+                                <div class="contractors-filter-group-title">
+                                    <label>
+                                        <input type="checkbox" name="group1" />
+                                        <span>Полиграфия <em>18</em></span>
+                                    </label>
+                                    <a href="#"></a>
+                                </div>
+                                <div class="contractors-filter-group-sub">
+                                    <div class="contractors-filter-group-sub-item">
+                                        <label>
+                                            <input type="checkbox" name="group1_1" />
+                                            <span>Дизайн <em>3</em></span>
+                                        </label>
+                                    </div>
+                                    <div class="contractors-filter-group-sub-item">
+                                        <label>
+                                            <input type="checkbox" name="group1_2" checked="checked" />
+                                            <span>Айдентика <em>15</em></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contractors filter group END -->
+
+                            <!-- contractors filter group -->
+                            <div class="contractors-filter-group">
+                                <div class="contractors-filter-group-title">
+                                    <label>
+                                        <input type="checkbox" name="group2" />
+                                        <span>Иллюстрации <em>18</em></span>
+                                    </label>
+                                    <a href="#"></a>
+                                </div>
+                                <div class="contractors-filter-group-sub">
+                                    <div class="contractors-filter-group-sub-item">
+                                        <label>
+                                            <input type="checkbox" name="group2_1" />
+                                            <span>Печать <em>3</em></span>
+                                        </label>
+                                    </div>
+                                    <div class="contractors-filter-group-sub-item">
+                                        <label>
+                                            <input type="checkbox" name="group2_2" />
+                                            <span>Реклама <em>4</em></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contractors filter group END -->
+
+                            <!-- contractors filter group -->
+                            <div class="contractors-filter-group open">
+                                <div class="contractors-filter-group-title">
+                                    <label>
+                                        <input type="checkbox" name="group3" checked="checked" />
+                                        <span>Типографии <em>7</em></span>
+                                    </label>
+                                    <a href="#"></a>
+                                </div>
+                                <div class="contractors-filter-group-sub">
+                                    <div class="contractors-filter-group-sub-item">
+                                        <label>
+                                            <input type="checkbox" name="group3_1" />
+                                            <span>Печать <em>3</em></span>
+                                        </label>
+                                    </div>
+                                    <div class="contractors-filter-group-sub-item">
+                                        <label>
+                                            <input type="checkbox" name="group3_2" />
+                                            <span>Реклама <em>4</em></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contractors filter group END -->
+
+                            <!-- contractors filter group -->
+                            <div class="contractors-filter-group open">
+                                <div class="contractors-filter-group-title">
+                                    <label>
+                                        <input type="checkbox" name="group4" />
+                                        <span>Полиграфия <em>18</em></span>
+                                    </label>
+                                    <a href="#"></a>
+                                </div>
+                                <div class="contractors-filter-group-sub">
+                                    <div class="contractors-filter-group-sub-item">
+                                        <label>
+                                            <input type="checkbox" name="group4_1" />
+                                            <span>Дизайн <em>3</em></span>
+                                        </label>
+                                    </div>
+                                    <div class="contractors-filter-group-sub-item">
+                                        <label>
+                                            <input type="checkbox" name="group4_2" />
+                                            <span>Айдентика <em>15</em></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contractors filter group END -->
+
+                        </form>
+                    </div>
+                    <!-- contractors filter END -->
+
+                </div>
+                <!-- contractors END -->
+
+            </div>
+            <!-- wrapper inner END -->
+        </div>
+        <!-- wrapper END -->
+
+        <footer>© 1999–2016 TASHIR Все права защищены</footer>
+
+    </body>
+</html>

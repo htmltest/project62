@@ -43,6 +43,7 @@
                                 <li><a href="#">Сотрудники,<br />телефоны</a></li>
                                 <li><a href="#">Организационная<br />структура</a></li>
                                 <li><a href="#">Материалы, веб-ресурсы,<br />медиа-архив</a></li>
+                                <li><a href="#">Каталог<br />подрядчиков</a></li>
                             </ul>
                         </nav>
                         <div class="menu-add">
@@ -68,10 +69,32 @@
                             </ul>
                         </div>
 
-                        <div class="header-user-link"><a href="#"><img src="images/avatar.png" alt="" width="38" height="38" /></a></div>
+                        <div class="header-user-menu">
+                            <a href="#" class="header-user-menu-link"><img src="files/avatar.jpg" alt="" width="38" height="38" /></a>
+                            <ul>
+                                <li><a href="#"><span>Профиль</span></a></li>
+                                <li><a href="#"><span>Сообщения</span> <em>5</em></a></li>
+                                <li><a href="#"><span>Выход</span></a></li>
+                            </ul>
+                        </div>
+
                         <div class="header-messages-link"><a href="#"><span>5</span></a></div>
                     </div>
                 </header>
+
+                <div class="search">
+                    <div class="search-inner">
+                        <form action="#" method="post">
+                            <div class="search-submit"><input type="submit" value="" /></div>
+                            <a href="#" class="search-close"></a>
+                            <div class="search-input"><input type="text" name="search" value="" placeholder="Поиск" class="required" /></div>
+                            <div class="search-results">
+                                <div class="search-results-list"></div>
+                                <div class="search-results-all"><a href="#">Все результаты</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
                 <!--  dashboard -->
                 <div class="dashboard">
@@ -143,6 +166,9 @@
                                     <div class="dashboard-summ-list-item-wrap">
                                         <div class="dashboard-summ-list-item">
                                             <div class="dashboard-summ-list-photo"><img src="files/avatar-5.jpg" alt="" width="55" height="55" /></div>
+                                            <div class="dashboard-summ-list-date">
+                                                <a href="#" class="dashboard-summ-list-messages-icon"><span>3</span></a>
+                                            </div>
                                             <div class="dashboard-summ-list-text">
                                                 <div class="dashboard-summ-list-name"><a href="#">Василий Иванович</a></div>
                                                 <div class="dashboard-summ-list-preview">Директор по развитию</div>
@@ -198,50 +224,78 @@
                                 <div class="dashboard-activity">
                                     <div class="dashboard-activity-wrap">
                                         <div class="dashboard-activity-item">
-                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-1.png" alt="" width="36" height="31" /></div>
+                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-1.png" alt="" width="34" height="31" /></div>
                                             <div class="dashboard-activity-item-text">
-                                                <div class="dashboard-activity-item-title"><a href="#">Инфографика «Ташир»<br />PDF, 321 КБ</a></div>
-                                                <div class="dashboard-activity-item-section"><a href="#">/Материалы</a></div>
+                                                <div class="dashboard-activity-item-title"><a href="#">Группа компаний «Ташир» среди лидеров экономики России...</a></div>
+                                                <div class="dashboard-activity-item-ctrl">
+                                                    <div class="dashboard-activity-item-section"><a href="#">/Новости</a></div>
+                                                    <div class="dashboard-activity-item-date">сегодня в 16:00</div>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="dashboard-activity-item">
-                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-2.png" alt="" width="29" height="29" /></div>
+                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-2.png" alt="" width="33" height="32" /></div>
                                             <div class="dashboard-activity-item-text">
-                                                <div class="dashboard-activity-item-title"><a href="#">Ваша анкета рассмотрена модератором</a></div>
-                                                <div class="dashboard-activity-item-section"><a href="#">/Анкетирование</a></div>
+                                                <div class="dashboard-activity-item-title"><a href="#">"Ташир" присоединился к акции по спасению амурских тигров</a></div>
+                                                <div class="dashboard-activity-item-ctrl">
+                                                    <div class="dashboard-activity-item-section"><a href="#">/События</a></div>
+                                                    <div class="dashboard-activity-item-date">28.07.2016</div>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="dashboard-activity-item">
-                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-3.png" alt="" width="34" height="30" /></div>
+                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-3.png" alt="" width="24" height="30" /></div>
                                             <div class="dashboard-activity-item-text">
-                                                <div class="dashboard-activity-item-title"><a href="#">Организация возьмет в аренду помещение для магазина настольных игр и досуга</a></div>
-                                                <div class="dashboard-activity-item-section"><a href="#">/Доска объявлений</a></div>
+                                                <div class="dashboard-activity-item-title"><a href="#">Василий Петров добавлен в Отдел продаж</a></div>
+                                                <div class="dashboard-activity-item-ctrl">
+                                                    <div class="dashboard-activity-item-section"><a href="#">/Сотрудники, телефоны</a></div>
+                                                    <div class="dashboard-activity-item-date">27.07.2016</div>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="dashboard-activity-item">
-                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-1.png" alt="" width="36" height="31" /></div>
+                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-4.png" alt="" width="36" height="31" /></div>
                                             <div class="dashboard-activity-item-text">
-                                                <div class="dashboard-activity-item-title"><a href="#">Инфографика «Ташир»<br />PDF, 321 КБ</a></div>
-                                                <div class="dashboard-activity-item-section"><a href="#">/Материалы</a></div>
+                                                <div class="dashboard-activity-item-title"><a href="#">Добавлены новые фотографии в альбом «Открытие ресторана...</a></div>
+                                                <div class="dashboard-activity-item-ctrl">
+                                                    <div class="dashboard-activity-item-section"><a href="#">/Медиа</a></div>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="dashboard-activity-item">
-                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-2.png" alt="" width="29" height="29" /></div>
+                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-5.png" alt="" width="37" height="37" /></div>
                                             <div class="dashboard-activity-item-text">
-                                                <div class="dashboard-activity-item-title"><a href="#">Ваша анкета рассмотрена модератором</a></div>
-                                                <div class="dashboard-activity-item-section"><a href="#">/Анкетирование</a></div>
+                                                <div class="dashboard-activity-item-title"><a href="#">Было произведено изменение профиля модератором</a></div>
+                                                <div class="dashboard-activity-item-ctrl">
+                                                    <div class="dashboard-activity-item-section"><a href="#">/Профиль</a></div>
+                                                    <div class="dashboard-activity-item-date">сегодня в 16:00</div>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="dashboard-activity-item">
-                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-3.png" alt="" width="34" height="30" /></div>
+                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-6.png" alt="" width="35" height="32" /></div>
                                             <div class="dashboard-activity-item-text">
-                                                <div class="dashboard-activity-item-title"><a href="#">Организация возьмет в аренду помещение для магазина настольных игр и досуга</a></div>
-                                                <div class="dashboard-activity-item-section"><a href="#">/Доска объявлений</a></div>
+                                                <div class="dashboard-activity-item-title"><a href="#">Был получен ответ от сервисной службы</a></div>
+                                                <div class="dashboard-activity-item-ctrl">
+                                                    <div class="dashboard-activity-item-section"><a href="#">/События</a></div>
+                                                    <div class="dashboard-activity-item-date">28.07.2016</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="dashboard-activity-item">
+                                            <div class="dashboard-activity-item-icon"><img src="files/dashboard-activity-item-icon-7.png" alt="" width="25" height="32" /></div>
+                                            <div class="dashboard-activity-item-text">
+                                                <div class="dashboard-activity-item-title"><a href="#">Василий Петров добавлен в Отдел продаж</a></div>
+                                                <div class="dashboard-activity-item-ctrl">
+                                                    <div class="dashboard-activity-item-section"><a href="#">/Новые новости</a></div>
+                                                    <div class="dashboard-activity-item-date">27.07.2016</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -264,8 +318,8 @@
                                 <a href="#" style="background-image:url(files/dashboard-event-1.jpg)">
                                     <div class="dashboard-events-item-text">
                                         <div class="dashboard-events-item-text-bg" style="background-image:url(files/dashboard-event-1-blur.jpg)"></div>
-                                        <div class="dashboard-events-item-date">19.12.2015</div>
-                                        <div class="dashboard-events-item-name">Открытие торгово-развлекательного центра «РИО» Румянцево</div>
+                                        <div class="dashboard-events-item-date">23.12.2016 - 28.12.2016</div>
+                                        <div class="dashboard-events-item-name">Десятки Дедов Морозов поздравят маленьких пациентов, спустившись с крыши Морозовской больницы</div>
                                     </div>
                                 </a>
                             </div>
@@ -273,8 +327,8 @@
                                 <a href="#" style="background-image:url(files/dashboard-event-2.jpg)" data-style="background-image:url(files/dashboard-event-2.jpg)" data-stylemobile="background-image:url(files/dashboard-event-2-mobile.jpg)">
                                     <div class="dashboard-events-item-text">
                                         <div class="dashboard-events-item-text-bg" style="background-image:url(files/dashboard-event-2-blur.jpg)" data-style="background-image:url(files/dashboard-event-2-blur.jpg)" data-stylemobile="background-image:url(files/dashboard-event-2-blur-mobile.jpg)"></div>
-                                        <div class="dashboard-events-item-date">19.12.2015</div>
-                                        <div class="dashboard-events-item-name">Фирменный стиль «Ташир» получил награду на международном фестивале рекламы и дизайна LIA 2015</div>
+                                        <div class="dashboard-events-item-date">05.12.2016</div>
+                                        <div class="dashboard-events-item-name">Открытие новых универмагов Take Away</div>
                                     </div>
                                 </a>
                             </div>
@@ -282,8 +336,8 @@
                                 <a href="#" style="background-image:url(files/dashboard-event-3.jpg)" data-style="background-image:url(files/dashboard-event-3.jpg)" data-stylemobile="background-image:url(files/dashboard-event-3-mobile.jpg)">
                                     <div class="dashboard-events-item-text">
                                         <div class="dashboard-events-item-text-bg" style="background-image:url(files/dashboard-event-3-blur.jpg)" data-style="background-image:url(files/dashboard-event-3-blur.jpg)" data-stylemobile="background-image:url(files/dashboard-event-3-blur-mobile.jpg)"></div>
-                                        <div class="dashboard-events-item-date">19.12.2015</div>
-                                        <div class="dashboard-events-item-name">Группа компаний «Ташир» поддержала Армению на крупнейшем международном фестивале музыкальной индустрии MIDEM 2015,</div>
+                                        <div class="dashboard-events-item-date">28.07.2016 - 30.07.2015</div>
+                                        <div class="dashboard-events-item-name">"Ташир" присоединился к акции по спасению амурских тигров</div>
                                     </div>
                                 </a>
                             </div>
@@ -295,29 +349,228 @@
 
                     <!-- dashboard news -->
                     <div class="dashboard-news">
-                        <h2>Новости</h2>
-
-                        <div class="dashboard-news-list">
-                            <div class="dashboard-news-item">
-                                <div class="dashboard-news-item-name"><a href="#">Ташир: итоги 2015 года</a></div>
-                                <div class="dashboard-news-item-anonce">Группа компаний «Ташир» расширяет географию деятельности в области ритейла и представляет три новых проекта в столице Армении...</div>
-                                <div class="dashboard-news-item-date">28.12.2015</div>
-                            </div>
-                            <div class="dashboard-news-item">
-                                <div class="dashboard-news-item-name"><a href="#">Новая сеть магазинов товаров для дома от «Ташир»</a></div>
-                                <div class="dashboard-news-item-anonce">Группа компаний «Ташир» запускает новый масштабный ресторанный проект — D.O.M площадью 3 000 кв. м на территории торговой галереи Grand Marina в городе Сочи...</div>
-                                <div class="dashboard-news-item-date">28.12.2015</div>
-                            </div>
-                            <div class="dashboard-news-item">
-                                <div class="dashboard-news-item-name"><a href="#">Акционерный коммерческий банк «ФОРА-БАНК» в числе крупнейших банков России</a></div>
-                                <div class="dashboard-news-item-anonce">Группа компаний «Ташир» запускает новый масштабный ресторанный проект — D.O.M площадью 3 000 кв. м на территории торговой галереи Grand Marina в городе Сочи...</div>
-                                <div class="dashboard-news-item-date">28.12.2015</div>
-                            </div>
+                        <div class="dashboard-news-header">
+                            <ul class="dashboard-news-menu">
+                                <li class="active"><a href="#">Новости</a></li>
+                                <li><a href="#">Новости отрасли</a></li>
+                            </ul>
+                            <a href="#" class="btn">Все новости</a>
                         </div>
-                        <div class="dashboard-news-ctrl"></div>
-                        <div class="dashboard-news-all"><a href="#" class="btn">Все новости</a></div>
+
+                        <!-- news list -->
+                        <div class="news-list active">
+
+                            <!-- news item -->
+                            <div class="news-item">
+                                <a href="#">
+                                    <div class="news-item-photo"><img src="files/news-7.jpg" alt="" /></div>
+                                    <div class="news-item-title">Группа компаний «Ташир» среди лидеров экономики России 2016 года</div>
+                                    <div class="news-item-anonce">Второй год подряд группа компаний «Ташир» входит в рейтинг делового журнала РБК «500..</div>
+                                    <div class="news-item-date">21.09.2016</div>
+                                </a>
+                            </div>
+                            <!-- news item END -->
+
+                            <!-- news item -->
+                            <div class="news-item">
+                                <a href="#">
+                                    <div class="news-item-photo"><img src="files/news-8.jpg" alt="" /></div>
+                                    <div class="news-item-title">Группа компаний «Ташир» подтвердила место в числе крупнейших компаний России</div>
+                                    <div class="news-item-anonce">Группа компаний «Ташир» вновь подтвердила свое место в числе крупнейших частных...</div>
+                                    <div class="news-item-date">19.09.2016</div>
+                                </a>
+                            </div>
+                            <!-- news item END -->
+
+                            <!-- news item -->
+                            <div class="news-item">
+                                <a href="#">
+                                    <div class="news-item-photo"><img src="files/news-9.jpg" alt="" /></div>
+                                    <div class="news-item-title">Группа компаний «Ташир» открыла новую сцену Театра Табакова в Москве</div>
+                                    <div class="news-item-anonce">Мэр Москвы Сергей Собянин открыл новую сцену Театра под руководством Олега Табакова...</div>
+                                    <div class="news-item-date">15.09.2016</div>
+                                </a>
+                            </div>
+                            <!-- news item END -->
+
+                        </div>
+                        <!-- news list END -->
+
+                        <!-- news list -->
+                        <div class="news-list">
+
+                            <!-- news item -->
+                            <div class="news-item">
+                                <a href="#">
+                                    <div class="news-item-photo"><img src="files/news-1.jpg" alt="" /></div>
+                                    <div class="news-item-title">Ташир: итоги 2015 года</div>
+                                    <div class="news-item-anonce">Группа компаний «Ташир» расширяет географию деятельности в области ритейла и представляет три новых проекта в столице Армении...</div>
+                                    <div class="news-item-date">28.12.2015</div>
+                                </a>
+                            </div>
+                            <!-- news item END -->
+
+                            <!-- news item -->
+                            <div class="news-item">
+                                <a href="#">
+                                    <div class="news-item-photo"><img src="files/news-2.jpg" alt="" /></div>
+                                    <div class="news-item-title">Новая сеть магазинов товаров для дома от «Ташир»</div>
+                                    <div class="news-item-anonce">Группа компаний «Ташир» запускает новый масштабный ресторанный проект — D.O.M площадью 3 000 кв. м на территории торговой галереи Grand Marina в городе Сочи...</div>
+                                    <div class="news-item-date">28.12.2015</div>
+                                </a>
+                            </div>
+                            <!-- news item END -->
+
+                            <!-- news item -->
+                            <div class="news-item">
+                                <a href="#">
+                                    <div class="news-item-photo"><img src="files/news-3.jpg" alt="" /></div>
+                                    <div class="news-item-title">Акционерный коммерческий банк «ФОРА-БАНК» в числе крупнейших банков России</div>
+                                    <div class="news-item-anonce">Группа компаний «Ташир» запускает новый масштабный ресторанный проект — D.O.M площадью 3 000 кв. м на территории торговой галереи Grand Marina в городе Сочи...</div>
+                                    <div class="news-item-date">28.12.2015</div>
+                                </a>
+                            </div>
+                            <!-- news item END -->
+
+                        </div>
+                        <!-- news list END -->
+
                     </div>
                     <!-- dashboard news END -->
+
+                    <!-- calendar -->
+                    <div class="calendar">
+                        <h2>Календарь событий</h2>
+                        <div class="calendar-month">
+                            <div class="calendar-month-current">Январь 2017</div>
+                            <div class="calendar-month-prev"><a href="#">Декабрь 2016</a></div>
+                            <div class="calendar-month-next"><a href="#">Февраль 2017</a></div>
+                        </div>
+                        <div class="calendar-list">
+                            <div class="calendar-item active">
+                                <div class="calendar-item-day">1</div>
+                                <div class="calendar-item-content">
+                                    <div class="calendar-item-link"><a href="#">Группа компаний «Ташир» среди лидеров...</a></div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">2</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">3</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">4</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">5</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">6</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">7</div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-day">8</div>
+                                <div class="calendar-item-content">
+                                    <div class="calendar-item-link"><a href="#">«Ташир» присоединился к акции по спасению амурских тигров</a></div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">9</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">10</div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-day">11</div>
+                                <div class="calendar-item-content">
+                                    <div class="calendar-item-link"><a href="#">День рождения Ильяева Андрея (35 лет)</a></div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">12</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">13</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">14</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">15</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">16</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">17</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">18</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">19</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">20</div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-day">21</div>
+                                <div class="calendar-item-content">
+                                    <div class="calendar-item-link"><a href="#">«Ташир» - Генеральный партнер Московского...</a></div>
+                                    <div class="calendar-item-more"><a href="#">+ ещё 1</a></div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">22</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">23</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">24</div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-day">25</div>
+                                <div class="calendar-item-content">
+                                    <div class="calendar-item-link birthday"><a href="#">День рождения Василия Петрова (35 лет)</a></div>
+                                    <div class="calendar-item-more"><a href="#">+ ещё 2</a></div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">26</div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-day">27</div>
+                                <div class="calendar-item-content">
+                                    <div class="calendar-item-link birthday"><a href="#">День рождения Саркиса Карапетяна (30 лет)</a></div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">28</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">29</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">30</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-day">31</div>
+                            </div>
+                            <div class="calendar-item disable">
+                            </div>
+                            <div class="calendar-item disable">
+                            </div>
+                            <div class="calendar-item disable">
+                            </div>
+                            <div class="calendar-item disable">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- calendar END -->
 
                     <!-- important -->
                     <div class="important">
