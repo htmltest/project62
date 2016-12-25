@@ -70,7 +70,7 @@ form {margin:32px 0; padding:20px 100px; background:rgba(255, 255, 255, .05)}
 .form-input {position:relative}
 .form-input input,
 .form-input textarea {border:1px solid rgba(221, 224, 229, .2); font:14px/20px Roboto, sans-serif; color:#cae5f1; vertical-align:top; margin:0; padding:9px 19px; width:100%; height:40px; box-sizing:border-box; outline:none; border-radius:20px; background:transparent; -webkit-appearance:none; transition:all .3s ease}
-.form-input textarea {height:80px; resize:none; overflow:auto}
+.form-input textarea {height:auto; resize:none; overflow:auto}
 .form-input input::-webkit-input-placeholder {opacity:1}
 .form-input input::-moz-placeholder {opacity:1}
 .form-input input:-ms-input-placeholder {opacity:1}
@@ -1277,3 +1277,128 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .contractors-item-detail-tags-item {padding:17px 0 0 0}
 .contractors-item-detail-tags-item-title {font-size:16px; color:#fff}
 .contractors-item-detail-tags-item-date {font-family:MinionPro, serif; padding:3px 0 0 0}
+
+.contractor-main {max-width:970px; margin:40px auto 0 auto; padding:60px 100px 40px 100px; background:rgba(255, 255, 255, .05)}
+.contractor-main-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contractor-main-logo {float:right; width:170px; line-height:0; padding:2px 0 0 0}
+.contractor-main-logo img {width:100%}
+.contractor-main-container {margin:0 300px 0 0}
+.contractor-main-content {float:left; width:100%}
+.contractor-main-content h1 {text-transform:none}
+
+.contractor-competences {border-bottom:1px solid #0090ae; margin:40px 0 0 0}
+.contractor-competences-header {border-bottom:2px solid #0090ae; font:12px/20px MinionPro, serif; text-transform:uppercase; padding:4px 0 7px 0}
+.contractor-competences-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contractor-competences-header-1 {float:left; width:200px}
+.contractor-competences-header-2 {float:right; width:170px; text-align:right}
+.contractor-competences-header-3 {position:relative; margin:0 170px 0 220px; color:#fff; text-align:center}
+.contractor-competences-header-3 span {position:absolute; left:0; top:0}
+.contractor-competences-header-3 em {position:absolute; right:0; top:0; font-style:normal}
+.contractor-competences-item {padding:0 0 18px 0}
+.contractor-competences-item+.contractor-competences-item {border-top:1px solid rgba(255, 255, 255, .1)}
+.contractor-competences-item-title {font:12px/20px MinionPro, serif; text-transform:uppercase; color:#fff; text-transform:uppercase; padding:22px 0 0 0}
+.contractor-competences-item-sub {padding:6px 0 4px 0}
+.contractor-competences-item-sub:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contractor-competences-item-sub-title {float:left; width:180px; font-size:16px; padding:0 0 0 20px}
+.contractor-competences-item-sub-rate {float:right; width:170px; font-size:16px; text-align:right}
+.contractor-competences-item-sub-value {margin:0 170px 0 220px; padding:7px 0 0 0}
+.contractor-competences-item-sub-value-item {float:left; width:calc(10% - 5px); margin:0 5px 0 0; height:10px; background:rgba(0, 144, 174, .25)}
+.contractor-competences-item-sub-value-item.active {background:#fff}
+
+.contractor-info {max-width:970px; margin:10px auto 0 auto; padding:51px 100px 0 100px; background:rgba(255, 255, 255, .05)}
+
+.contractor-info-menu {margin:0 0 0 -2px; font-family:MinionPro, serif; text-transform:uppercase}
+.contractor-info-menu:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contractor-info-menu li {float:left; margin:0 0 0 26px; padding:0 2px 0 2px}
+.contractor-info-menu li:first-child {margin:0}
+.contractor-info-menu li:before {display:none}
+.contractor-info-menu li.active {border-bottom:2px solid #1ab2d2}
+.contractor-info-menu li a {text-decoration:none; color:#fff; opacity:.5; transition:opacity .3s ease}
+.contractor-info-menu li a span {color:#0090ae}
+.contractor-info-menu li a:hover,
+.contractor-info-menu li.active a {opacity:1}
+
+.contractor-info-tab {display:none}
+.contractor-info-tab.active {display:block}
+.contractor-info-tab:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.contractor-info-map {float:left; width:470px; margin:55px 0 55px -470px}
+.contractor-info-map #map {height:470px}
+.contactor-info-contacts {float:left; width:100%; padding:57px 500px 40px 0; box-sizing:border-box}
+.contactor-info-contacts h2:first-child {margin-top:0}
+.contactor-info-contacts dl {font-size:16px; margin:0; padding:0 0 15px 0}
+.contactor-info-contacts dl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contactor-info-contacts dt {float:left; clear:left; width:87px; margin:0; padding:14px 0 6px 0}
+.contactor-info-contacts dd {margin:0 0 0 87px; padding:14px 0 6px 0; color:#fff}
+.contactor-info-contacts dd a {color:#fff; text-decoration:underline}
+.contactor-info-contacts dd a:hover {text-decoration:none}
+.contractor-info-contacts-name {font-size:18px; color:#fff; padding:19px 0 0 0}
+.contractor-info-contacts-post {font-size:16px; margin:-1px 0 7px 0}
+
+.contractor-projects-header {padding:57px 0 0 0}
+.contractor-projects-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contractor-projects-header h2 {float:left; margin:0}
+.contractor-projects-filter {float:right; font:12px/20px MinionPro, serif; text-transform:uppercase; margin:0; padding:1px 0 0 0}
+.contractor-projects-filter li {float:left; margin:0 0 0 26px; padding:0 2px}
+.contractor-projects-filter li:first-child {margin:0}
+.contractor-projects-filter li:before {display:none}
+.contractor-projects-filter li.active {border-bottom:3px solid #0090ae}
+.contractor-projects-filter li a {color:#fff; text-decoration:none; opacity:.5; transition:opacity .3s ease}
+.contractor-projects-filter li a:hover,
+.contractor-projects-filter li.active a {opacity:1}
+
+.contractor-projects {padding:26px 0 60px 0}
+.contractor-project {margin:10px 0 0 0; padding:23px 30px 30px 30px; background:rgba(255, 255, 255, .05); position:relative}
+.contractor-project-title {font:21px/25px MinionPro, serif; color:#fff; margin:0 40px 0 0}
+.contractor-project-title span {display:inline-block; vertical-align:middle; padding:0 17px; font:13px/27px Roboto, serif; border-radius:3px; margin:-2px 0 0 6px}
+.contractor-project-title span.success {color:#313944; background:#00beb1}
+.contractor-project-title span.soon {color:#fff; background:#0090ae}
+.contractor-project-open-link {display:block; width:70px; height:77px; position:absolute; right:0; top:0}
+.contractor-project-open-link:after {content:""; display:block; width:15px; height:9px; position:absolute; left:26px; top:34px; background:url(../images/contractors-item-detail-link.png)}
+.contractor-project.open .contractor-project-open-link:after {background-position:left -9px}
+.contractor-project-dates {font-size:16px; padding:8px 0 0 0}
+.contractor-project-dates em {display:inline-block; vertical-align:middle; width:13px; height:7px; background:url(../images/contractor-project-dates-arrow.png); margin:-2px 8px 0 8px}
+.contractor-project-dates strong {font-weight:normal; color:#fff}
+.contractor-project-dates span.success {color:#00beb1; margin:0 0 0 6px; font-size:13px}
+.contractor-project-dates span.success:before {content:""; display:inline-block; vertical-align:middle; width:14px; height:10px; background:url(../images/contractor-project-dates-success.png); margin:0 8px 0 0}
+.contractor-project-dates span.soon {color:#0090ae}
+.contractor-project-detail {display:none; padding:18px 0 0 0}
+.contractor-project.open .contractor-project-detail {display:block}
+.contractor-project-descr {font-size:16px}
+.contractor-project-descr-more {display:none}
+.contractor-project-descr.open .contractor-project-descr-more {display:block}
+.contractor-project-descr-more-link {font-size:12px; text-transform:uppercase; padding:10px 0 0 0}
+.contractor-project-descr-more-link a {color:#fff; text-decoration:none}
+.contractor-project-descr-more-link a:hover {text-decoration:underline}
+.contractor-project-descr-more-link a span+span {display:none}
+.contractor-project-descr.open .contractor-project-descr-more-link a span {display:none}
+.contractor-project-descr.open .contractor-project-descr-more-link a span+span {display:inline}
+.contractor-project-comment {border:1px solid rgba(255, 255, 255, .2); position:relative; border-radius:3px; padding:24px 100px 24px 30px; margin:48px 0 0 0}
+.contractor-project-comment-text {font-size:16px}
+.contractor-project-comment-title {position:absolute; left:18px; top:-7px; color:#fff; text-transform:uppercase; font-family:MinionPro, serif; padding:0 12px; background:#303944}
+.contractor-project-comment-edit {display:block; width:41px; height:41px; background:url(../images/contractor-project-comment-edit.png); position:absolute; right:30px; top:50%; margin:-20px 0 0 0}
+
+.contractor-info-tags {padding:57px 0 55px 0}
+.contractor-info-tags h2 {margin:0}
+.contractor-info-tag {padding:36px 0 7px 0}
+.contractor-info-tag-text {background:rgba(255, 255, 255, .05); border-radius:3px; padding:25px 110px 35px 30px; position:relative; font-size:16px}
+.contractor-info-tag-text:after {content:""; display:block; width:22px; height:12px; background:url(../images/contractor-info-tag-text.png); position:absolute; left:29px; bottom:-12px}
+.contractor-info-tag-text-wrap {width:100%; display:table}
+.contractor-info-tag-text-wrap-inner {height:40px; vertical-align:middle; display:table-cell}
+.contractor-info-tag-text-edit-link {position:absolute; right:30px; top:50%; margin:-20px 0 0 0; line-height:0}
+.contractor-info-tag-text-edit-link img {opacity:.25}
+.contractor-info-tag-text-edit-link a img {opacity:1}
+.contractor-info-tag-autor {padding:22px 0 0 0}
+.contractor-info-tag-autor:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contractor-info-tag-autor-avatar {float:left; width:55px; line-height:0; padding:0 0 0 10px}
+.contractor-info-tag-autor-avatar img {width:55px; border-radius:55px}
+.contractor-info-tag-autor-text {margin:0 0 0 75px}
+.contractor-info-tag-autor-name {font:18px/20px MinionPro, serif; color:#fff; padding:8px 0 0 0}
+.contractor-info-tag-autor-date {margin:-2px 0 0 0}
+
+.contractor-info-tag-add {margin:0 -100px; border-top:1px solid #18232f; padding:30px 200px}
+.contractor-info-tag-add form {margin:0; padding:0; background:none}
+.contractor-info-tag-add .form-input textarea {color:#fff}
+.contractor-info-tag-add .form-submit {margin:30px 0 0 0}
+
+.contractor-info+.employee-ctrl .employee-ctrl-item {background:rgba(255, 255, 255, .05)}

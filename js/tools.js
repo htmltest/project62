@@ -272,6 +272,44 @@
             e.preventDefault();
         });
 
+        $('.contractor-info-menu li a').click(function(e) {
+            var curLi = $(this).parent();
+            if (!curLi.hasClass('active')) {
+                $('.contractor-info-menu li.active').removeClass('active');
+                curLi.addClass('active');
+                var curIndex = $('.contractor-info-menu li').index(curLi);
+                $('.contractor-info-tab.active').removeClass('active');
+                $('.contractor-info-tab').eq(curIndex).addClass('active');
+            }
+            e.preventDefault();
+        });
+
+        $('.contractor-project-open-link').click(function(e) {
+            $(this).parent().toggleClass('open');
+            e.preventDefault();
+        });
+
+        $('.contractor-project-descr-more-link a').click(function(e) {
+            $(this).parent().parent().toggleClass('open');
+            e.preventDefault();
+        });
+
+        $('.contractor-projects-filter li a').click(function(e) {
+            var curLi = $(this).parent();
+            if (!curLi.hasClass('active')) {
+                $('.contractor-projects-filter li.active').removeClass('active');
+                curLi.addClass('active');
+                var curClass = $(this).attr('class');
+                if (curClass != '') {
+                    $('.contractor-project').hide();
+                    $('.contractor-project.' + curClass).show();
+                } else {
+                    $('.contractor-project').show();
+                }
+            }
+            e.preventDefault();
+        });
+
     });
 
     $(window).resize(function() {

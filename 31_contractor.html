@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Tashir</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,700,700italic&amp;subset=latin,cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" />
+        <link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-thumbs.css" />
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/jquery.textarea.autoresize.js"></script>
+        <script src="js/fancybox/jquery.fancybox.js"></script>
+        <script src="js/fancybox/helpers/jquery.fancybox-media.js"></script>
+        <script src="js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="header-inner">
+                        <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="206" height="53" /></a></div>
+
+                        <nav>
+                            <ul>
+                                <li><a href="#">Сотрудники,<br />телефоны</a></li>
+                                <li><a href="#">Организационная<br />структура</a></li>
+                                <li><a href="#">Материалы, веб-ресурсы,<br />медиа-архив</a></li>
+                                <li class="active"><a href="#">Каталог<br />подрядчиков</a></li>
+                            </ul>
+                        </nav>
+                        <div class="menu-add">
+                            <a href="#" class="menu-add-link"></a>
+                            <ul>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">ЗАявки в Сервисные службы</a></li>
+                                <li><a href="#">Анкетирование</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="menu-mobile-link"></a>
+
+                        <div class="menu-mobile">
+                            <ul>
+                                <li><a href="#"><span><img src="images/menu-icon-1.png" alt="" width="26" height="33" /></span>новости</a></li>
+                                <li class="active"><a href="#"><span><img src="images/menu-icon-2.png" alt="" width="33" height="30" /></span>Сотрудники, телефоны</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-3.png" alt="" width="40" height="31" /></span>Организационная структура</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-4.png" alt="" width="36" height="31" /></span>Материалы, веб-ресурсы, медиа-архив</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-5.png" alt="" width="27" height="30" /></span>Заявки в сервисные службы</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-6.png" alt="" width="29" height="29" /></span>Анкетирование</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-7.png" alt="" width="34" height="30" /></span>Доска объявлений</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-user-menu">
+                            <a href="#" class="header-user-menu-link"><img src="files/avatar.jpg" alt="" width="38" height="38" /></a>
+                            <ul>
+                                <li><a href="#"><span>Профиль</span></a></li>
+                                <li><a href="#"><span>Сообщения</span> <em>5</em></a></li>
+                                <li><a href="#"><span>Выход</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-messages-link"><a href="#"><span>5</span></a></div>
+                    </div>
+                </header>
+
+                <div class="search">
+                    <div class="search-inner">
+                        <form action="#" method="post">
+                            <div class="search-submit"><input type="submit" value="" /></div>
+                            <a href="#" class="search-close"></a>
+                            <div class="search-input"><input type="text" name="search" value="" placeholder="Поиск по Каталогу подрядчиков" class="required" /></div>
+                            <div class="search-results">
+                                <div class="search-results-list"></div>
+                                <div class="search-results-all"><a href="#">Все результаты</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- contractor main -->
+                <div class="contractor-main">
+                    <div class="breadcrumbs">
+                        <a href="#">Каталог подрядчиков</a> <span></span>
+                    </div>
+
+                    <div class="contractor-main-inner">
+                        <div class="contractor-main-logo"><img src="files/contractor-main-logo.png" alt="" /></div>
+
+                        <div class="contractor-main-container">
+                            <div class="contractor-main-content">
+                                <h1>Артикул Медиа</h1>
+                                <div class="contractor-competences">
+                                    <div class="contractor-competences-header">
+                                        <div class="contractor-competences-header-1">Компетенции</div>
+                                        <div class="contractor-competences-header-2">Ставка (руб/час)</div>
+                                        <div class="contractor-competences-header-3">
+                                            <span>1</span>
+                                            5
+                                            <em>10</em>
+                                        </div>
+                                    </div>
+                                    <div class="contractor-competences-item">
+                                        <div class="contractor-competences-item-title">Дизайн</div>
+                                        <div class="contractor-competences-item-sub">
+                                            <div class="contractor-competences-item-sub-title">Айдентика</div>
+                                            <div class="contractor-competences-item-sub-rate">1 350</div>
+                                            <div class="contractor-competences-item-sub-value">
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                            </div>
+                                        </div>
+                                        <div class="contractor-competences-item-sub">
+                                            <div class="contractor-competences-item-sub-title">Иллюстрации</div>
+                                            <div class="contractor-competences-item-sub-rate">1 500</div>
+                                            <div class="contractor-competences-item-sub-value">
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="contractor-competences-item">
+                                        <div class="contractor-competences-item-title">Видео</div>
+                                        <div class="contractor-competences-item-sub">
+                                            <div class="contractor-competences-item-sub-title">Видео-продакшн</div>
+                                            <div class="contractor-competences-item-sub-rate">1 600</div>
+                                            <div class="contractor-competences-item-sub-value">
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="contractor-competences-item">
+                                        <div class="contractor-competences-item-title">Сайты</div>
+                                        <div class="contractor-competences-item-sub">
+                                            <div class="contractor-competences-item-sub-title">1С-Битрикс</div>
+                                            <div class="contractor-competences-item-sub-rate">1 600</div>
+                                            <div class="contractor-competences-item-sub-value">
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                            </div>
+                                        </div>
+                                        <div class="contractor-competences-item-sub">
+                                            <div class="contractor-competences-item-sub-title">WordPress</div>
+                                            <div class="contractor-competences-item-sub-rate">1 600</div>
+                                            <div class="contractor-competences-item-sub-value">
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                            </div>
+                                        </div>
+                                        <div class="contractor-competences-item-sub">
+                                            <div class="contractor-competences-item-sub-title">Тестирование</div>
+                                            <div class="contractor-competences-item-sub-rate">1 200</div>
+                                            <div class="contractor-competences-item-sub-value">
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item active"></div>
+                                                <div class="contractor-competences-item-sub-value-item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- contractor main END -->
+
+                <!-- contractor info -->
+                <div class="contractor-info">
+                    <ul class="contractor-info-menu">
+                        <li class="active"><a href="#">Контактная информация</a></li>
+                        <li><a href="#">Проекты &nbsp;2<span>/15</span></a></li>
+                        <li><a href="#">Особые пометки</a></li>
+                    </ul>
+
+                    <!-- contractor info tab -->
+                    <div class="contractor-info-tab active">
+                        <div class="contactor-info-contacts">
+                            <h2>Контактная информация</h2>
+                            <dl>
+                                <dt>Адрес</dt>
+                                <dd>105066, Москва, ул. Александра Лукьянова, д. 3</dd>
+
+                                <dt>Сайт</dt>
+                                <dd><a href="#">http://articulmedia.ru/</a></dd>
+
+                                <dt>Email</dt>
+                                <dd>info@articulmedia.ru</dd>
+
+                                <dt>Телефон</dt>
+                                <dd>+ 7 (495) 739-07-41</dd>
+                            </dl>
+                            <hr />
+                            <h2>Контактные лица</h2>
+                            <div class="contractor-info-contacts-name">Ильинский Юрий Юрьевич</div>
+                            <div class="contractor-info-contacts-post">Менеджер проектов</div>
+                            <dl>
+                                <dt>Email</dt>
+                                <dd>info@articulmedia.ru</dd>
+
+                                <dt>Телефон</dt>
+                                <dd>+ 7 (495) 739-07-41</dd>
+                            </dl>
+
+                            <div class="contractor-info-contacts-name">Хованский Юрий Владимирович</div>
+                            <div class="contractor-info-contacts-post">Руководитель группы поддержки</div>
+                            <dl>
+                                <dt>Email</dt>
+                                <dd>u.hovansy@articulmedia.ru</dd>
+
+                                <dt>Телефон</dt>
+                                <dd>+ 7 (495) 123-45-67</dd>
+                            </dl>
+                        </div>
+
+                        <div class="contractor-info-map">
+                            <div id="map"></div>
+                            <script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                            <script>
+                                ymaps.ready(init);
+
+                                var myMap;
+
+                                function init() {
+                                    myMap = new ymaps.Map('map', {
+                                        center: [55.769150, 37.664321],
+                                        zoom: 17,
+                                        controls: []
+                                    });
+
+                                    myMap.behaviors.disable('scrollZoom');
+
+                                    var myPlacemark = new ymaps.Placemark([55.769150, 37.664321], {
+                                        iconCaption: 'улица Александра Лукьянова, 3'
+                                    }, {
+                                        preset: 'islands#blueDotIconWithCaption'
+                                    });
+                                    myMap.geoObjects.add(myPlacemark);
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <!-- contractor info tab END -->
+
+                    <!-- contractor info tab -->
+                    <div class="contractor-info-tab">
+
+                        <div class="contractor-projects-header">
+                            <h2>Проекты</h2>
+                            <ul class="contractor-projects-filter">
+                                <li class="active"><a href="#" class="">Все</a></li>
+                                <li><a href="#" class="soon">В процессе</a></li>
+                                <li><a href="#" class="success">завершенные</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- contractor projects -->
+                        <div class="contractor-projects">
+
+                            <!-- contractor project -->
+                            <div class="contractor-project success">
+                                <div class="contractor-project-title">Сайт Синема Стар <span class="success">Успешно завершен</span></div>
+                                <div class="contractor-project-dates">26 августа 2015 <em></em> 30 октября 2015 <span class="success">Сдан вовремя</span></div>
+                                <div class="contractor-project-detail">
+                                    <div class="contractor-project-descr">
+                                        Бюджет на размещение переворачивает креатив. Раскрутка инновационна. Conversion rate основан на анализе телесмотрения. Практика однозначно показывает, что ассортиментная политика предприятия требовальна к креативу.
+                                        <div class="contractor-project-descr-more">Бюджет на размещение переворачивает креатив. Раскрутка инновационна. Conversion rate основан на анализе телесмотрения. Практика однозначно показывает, что ассортиментная политика предприятия требовальна к креативу.</div>
+                                        <div class="contractor-project-descr-more-link"><a href="#"><span>Развернуть</span><span>Свернуть</span></a></div>
+                                    </div>
+                                    <div class="contractor-project-comment">
+                                        <div class="contractor-project-comment-title">Комментарий к проекту</div>
+                                        <div class="contractor-project-comment-text">Рекламная поддержка откровенно цинична. Product placement порождает межличностный потребительский рынок. Conversion rate переворачивает повторный контакт. Оценка эффективности кампании, пренебрегая деталями, по-прежнему востребована.</div>
+                                        <a href="#" class="contractor-project-comment-edit"></a>
+                                    </div>
+                                </div>
+                                <a href="#" class="contractor-project-open-link"></a>
+                            </div>
+                            <!-- contractor project END -->
+
+                            <!-- contractor project -->
+                            <div class="contractor-project soon">
+                                <div class="contractor-project-title">Сайт Авеню <span class="soon">В процессе</span></div>
+                                <div class="contractor-project-dates">01 февраля 2016 <em></em> <strong>12 декабря 2016</strong> <span class="soon">/ 5 дней осталось</span></div>
+                                <div class="contractor-project-detail">
+                                    <div class="contractor-project-descr">
+                                        Бюджет на размещение переворачивает креатив. Раскрутка инновационна. Conversion rate основан на анализе телесмотрения. Практика однозначно показывает, что ассортиментная политика предприятия требовальна к креативу.
+                                        <div class="contractor-project-descr-more">Бюджет на размещение переворачивает креатив. Раскрутка инновационна. Conversion rate основан на анализе телесмотрения. Практика однозначно показывает, что ассортиментная политика предприятия требовальна к креативу.</div>
+                                        <div class="contractor-project-descr-more-link"><a href="#"><span>Развернуть</span><span>Свернуть</span></a></div>
+                                    </div>
+                                </div>
+                                <a href="#" class="contractor-project-open-link"></a>
+                            </div>
+                            <!-- contractor project END -->
+
+                            <!-- contractor project -->
+                            <div class="contractor-project success">
+                                <div class="contractor-project-title">Сайт Синема <span class="success">Завершен</span></div>
+                                <div class="contractor-project-dates">15 сентября 2015 <em></em> 20 сентября 2015 <span class="success">Сдан 03 октября 2015</span></div>
+                                <div class="contractor-project-detail">
+                                    <div class="contractor-project-descr">
+                                        Бюджет на размещение переворачивает креатив. Раскрутка инновационна. Conversion rate основан на анализе телесмотрения. Практика однозначно показывает, что ассортиментная политика предприятия требовальна к креативу.
+                                        <div class="contractor-project-descr-more">Бюджет на размещение переворачивает креатив. Раскрутка инновационна. Conversion rate основан на анализе телесмотрения. Практика однозначно показывает, что ассортиментная политика предприятия требовальна к креативу.</div>
+                                        <div class="contractor-project-descr-more-link"><a href="#"><span>Развернуть</span><span>Свернуть</span></a></div>
+                                    </div>
+                                </div>
+                                <a href="#" class="contractor-project-open-link"></a>
+                            </div>
+                            <!-- contractor project END -->
+
+                        </div>
+                        <!-- contractor projects END -->
+
+                    </div>
+                    <!-- contractor info tab END -->
+
+                    <!-- contractor info tab -->
+                    <div class="contractor-info-tab">
+                        <div class="contractor-info-tags">
+                            <h2>Особые пометки</h2>
+
+                            <!-- contractor info tag -->
+                            <div class="contractor-info-tag">
+                                <div class="contractor-info-tag-text">
+                                    <div class="contractor-info-tag-text-wrap">
+                                        <div class="contractor-info-tag-text-inner">Внутрифирменная реклама регулярно раскручивает пул лояльных изданий, не считаясь с затратами. Надо сказать, что анализ рыночных цен спорадически транслирует эксклюзивный рекламный бриф</div>
+                                    </div>
+                                    <div class="contractor-info-tag-text-edit-link"><a href="#"><img src="images/contractor-project-comment-edit.png" alt="" /></a></div>
+                                </div>
+                                <div class="contractor-info-tag-autor">
+                                    <div class="contractor-info-tag-autor-avatar"><img src="files/avatar-3.jpg" alt="" /></div>
+                                    <div class="contractor-info-tag-autor-text">
+                                        <div class="contractor-info-tag-autor-name">Игнатян Гайк</div>
+                                        <div class="contractor-info-tag-autor-date">26 августа 2015, 12:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contractor info tag END -->
+
+                            <!-- contractor info tag -->
+                            <div class="contractor-info-tag">
+                                <div class="contractor-info-tag-text">
+                                    <div class="contractor-info-tag-text-wrap">
+                                        <div class="contractor-info-tag-text-inner">Жизненный цикл продукции экономит популярный анализ зарубежного опыта</div>
+                                    </div>
+                                    <div class="contractor-info-tag-text-edit-link"><a href="#"><img src="images/contractor-project-comment-edit.png" alt="" /></a></div>
+                                </div>
+                                <div class="contractor-info-tag-autor">
+                                    <div class="contractor-info-tag-autor-avatar"><img src="files/avatar-2.jpg" alt="" /></div>
+                                    <div class="contractor-info-tag-autor-text">
+                                        <div class="contractor-info-tag-autor-name">Булатов Игорь</div>
+                                        <div class="contractor-info-tag-autor-date">21 августа 2015, 18:31</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contractor info tag END -->
+
+                            <!-- contractor info tag -->
+                            <div class="contractor-info-tag">
+                                <div class="contractor-info-tag-text">
+                                    <div class="contractor-info-tag-text-wrap">
+                                        <div class="contractor-info-tag-text-inner">Рекламная заставка индуцирует продукт. Тактика выстраивания отношений с коммерсчекими агентами, пренебрегая деталями, сознательно изменяет повторный контакт. Метод изучения рынка обычно правомочен. Точечное воздействие позитивно притягивает креативный анализ рыночных цен. Процесс стратегического планирования охватывает формирование имиджа. Конкурентоспособность без оглядки на авторитеты синхронизирует креатив, учитывая современные тенденции.</div>
+                                    </div>
+                                    <div class="contractor-info-tag-text-edit-link"><a href="#"><img src="images/contractor-project-comment-edit.png" alt="" /></a></div>
+                                </div>
+                                <div class="contractor-info-tag-autor">
+                                    <div class="contractor-info-tag-autor-avatar"><img src="files/avatar-3.jpg" alt="" /></div>
+                                    <div class="contractor-info-tag-autor-text">
+                                        <div class="contractor-info-tag-autor-name">Игнатян Гайк</div>
+                                        <div class="contractor-info-tag-autor-date">26 августа 2015, 12:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contractor info tag END -->
+                        </div>
+
+                        <div class="contractor-info-tag-add">
+                            <form action="#" method="post">
+                                <div class="form-input"><textarea name="message" rows="4" cols="10" placeholder="Ваш комментарий"></textarea></div>
+                                <div class="form-submit"><input type="submit" value="Отправить" /></div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- contractor info tab END -->
+                </div>
+                <!-- contractor info END -->
+
+                <div class="employee-ctrl">
+                    <div class="employee-ctrl-inner">
+                        <a href="#" class="employee-ctrl-item employee-ctrl-item-prev">
+                            Redis
+                            <div class="employee-ctrl-post">Интернет-агентство</div>
+                        </a>
+                        <a href="#" class="employee-ctrl-item">
+                            <div class="employee-ctrl-back">Вернуться к списку</div>
+                        </a>
+                        <a href="#" class="employee-ctrl-item employee-ctrl-item-next">
+                            qSoft
+                            <div class="employee-ctrl-post">Интернет-агентство</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- wrapper inner END -->
+        </div>
+        <!-- wrapper END -->
+
+        <footer>© 1999–2016 TASHIR Все права защищены</footer>
+
+    </body>
+</html>
