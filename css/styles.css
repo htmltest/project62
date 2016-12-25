@@ -1197,7 +1197,7 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 
 .contractors h1 {text-align:center; font-size:42px; line-height:42px; margin:0; padding:61px 0 37px 0}
 
-.contractors-filter {float:left; width:260px; background:#fff; padding:30px 30px 0 30px}
+.contractors-filter {float:left; width:230px; background:#fff; padding:30px 30px 0 30px}
 .contractors-filter h2 {margin:0; color:#01426a}
 .contractors-filter form {margin:0; padding:0}
 .contractors-filter-group {border-top:1px solid #eaeaea; padding:17px 0 18px 0}
@@ -1228,3 +1228,52 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .contractors-filter-group-sub-item label input:checked+span:before {background-position:left -11px}
 .contractors-filter-group-sub-item label span em {font-style:normal; color:#00beb1; font-family:MinionPro, serif; margin:0 0 0 5px}
 .contractors-filter-group-sub-item label input:checked+span em {color:#97edff}
+
+.contractors-filter-reset {text-align:center; border-top:1px solid #eaeaea; padding:19px 0 21px 0}
+.contractors-filter-reset input {vertical-align:top; border:none; overflow:visible; border-radius:0; background:none; margin:0; padding:0; outline:none; color:#01426a; text-align:center; cursor:pointer; text-transform:uppercase; font:12px/18px MinionPro, serif; -webkit-appearance:none; transition:all .3s ease}
+
+.contractors-list {margin:0 0 0 290px}
+.contractors-list-inner {float:left; width:100%}
+.contractors-list-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contractors-item {float:left; width:50%; padding:0 0 10px 10px; box-sizing:border-box}
+.contractors-item:nth-child(2n+1) {clear:left}
+.contractors-item-anonce {background:rgba(255, 255, 255, .05); padding:30px}
+.contractors-item-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contractors-item-logo {float:right; width:170px; line-height:0}
+.contractors-item-logo img {display:block; width:100%}
+.contractors-item-title {margin:0 200px 0 0; font:21px/25px MinionPro, serif; padding:8px 0 0 0}
+.contractors-item-title a {color:#fff; text-decoration:underline}
+.contractors-item-title a:hover {text-decoration:none}
+.contractors-item-tags {margin:0 200px 0 0; color:#cae5f1; padding:15px 0 0 0}
+.contractors-item-tags a {color:#cae5f1}
+.contractors-item-tags span {color:#0090ae; font-family:MinionPro, serif}
+.contractors-item-ctrl {padding:10px 0 0 0}
+.contractors-item-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.contractors-item-detail-link {float:right; width:70px; height:40px; position:relative; background:rgba(255, 255, 255, .05)}
+.contractors-item-detail-link:after {content:""; display:block; width:15px; height:9px; position:absolute; left:28px; top:15px; background:url(../images/contractors-item-detail-link.png)}
+.contractors-item.open .contractors-item-detail-link:after {background-position:left -9px}
+.contractors-item.open .contractors-item-detail-link:before {content:""; display:block; width:100%; height:31px; position:absolute; left:0; top:100%; background:rgba(255, 255, 255, .05)}
+.contractors-item-projects {margin:0 200px 0 0; font-size:14px; line-height:40px; text-transform:uppercase}
+.contractors-item-projects a {color:#fff; text-decoration:underline}
+.contractors-item-projects a:hover {text-decoration:none}
+.contractors-item-projects span {font-family:MinionPro, serif; color:#fff; margin:0 0 0 8px}
+.contractors-item-projects span em {font-style:normal; color:#0090ae}
+
+.contractors-item-detail {display:none; background:rgba(255, 255, 255, .15); padding:30px; margin-right:calc(-100% - 10px)}
+.contractors-item:nth-child(2n) .contractors-item-detail {margin-right:0; margin-left:calc(-100% - 10px)}
+.contractors-item.open .contractors-item-detail {display:block}
+.contractors-item-detail-inner {display:table; width:100%}
+.contractors-item-detail-contacts {display:table-cell; vertical-align:top; width:50%; padding:0 35px 0 0}
+.contractors-item-detail-title {font-family:MinionPro, serif; text-transform:uppercase}
+.contractors-item-detail-title a {color:#fff; text-decoration:underline}
+.contractors-item-detail-title a:hover {text-decoration:none}
+.contractors-item-detail-tags {display:table-cell; vertical-align:top; width:50%; padding:0 0 0 34px; border-left:1px solid rgba(255, 255, 255, .1)}
+.contractors-item-detail-name {font-size:16px; color:#fff; padding:18px 0 0 0}
+.contractors-item-detail-post {padding:1px 0 0 0}
+.contractors-item-detail-email {font-size:16px; padding:0 0 0 25px; margin:19px 0 0 0; background:url(../images/contractors-item-detail-email.png) no-repeat left 7px}
+.contractors-item-detail-email a {color:#cae5f1; text-decoration:underline}
+.contractors-item-detail-email a:hover {color:#fff; text-decoration:none}
+.contractors-item-detail-phone {font-size:16px; padding:0 0 0 25px; margin:10px 0 0 0; background:url(../images/contractors-item-detail-phone.png) no-repeat left 5px}
+.contractors-item-detail-tags-item {padding:17px 0 0 0}
+.contractors-item-detail-tags-item-title {font-size:16px; color:#fff}
+.contractors-item-detail-tags-item-date {font-family:MinionPro, serif; padding:3px 0 0 0}

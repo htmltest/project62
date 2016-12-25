@@ -255,6 +255,23 @@
 
         $('.contractors-filter-group-title input:checked').parents().filter('.contractors-filter-group').addClass('checked');
 
+        $('.contractors-filter-reset input').click(function() {
+            window.setTimeout(function() {
+                $('.contractors-filter-group input').change();
+            }, 100);
+        });
+
+        $('.contractors-item-detail-link').click(function(e) {
+            var curItem = $(this).parents().filter('.contractors-item');
+            if (curItem.hasClass('open')) {
+                curItem.removeClass('open');
+            } else {
+                $('.contractors-item.open').removeClass('open');
+                curItem.addClass('open');
+            }
+            e.preventDefault();
+        });
+
     });
 
     $(window).resize(function() {
