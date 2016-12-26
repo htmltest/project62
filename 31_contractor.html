@@ -79,6 +79,16 @@
                         </div>
 
                         <div class="header-messages-link"><a href="#"><span>5</span></a></div>
+
+                        <a href="#" class="menu-user-mobile-link"><span>5</span></a>
+
+                        <div class="menu-user-mobile">
+                            <ul>
+                                <li><a href="#"><span><img src="images/menu-user-icon-1.png" alt="" width="29" height="27" /></span>Профиль</a></li>
+                                <li><a href="#"><span><img src="images/menu-user-icon-2.png" alt="" width="34" height="30" /></span>Сообщения</a></li>
+                                <li><a href="#"><span><img src="images/menu-user-icon-3.png" alt="" width="23" height="25" /></span>Выход</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </header>
 
@@ -108,6 +118,7 @@
                         <div class="contractor-main-container">
                             <div class="contractor-main-content">
                                 <h1>Артикул Медиа</h1>
+                                <div class="contractor-main-logo-mobile"><img src="files/contractor-main-logo-mobile.png" alt="" /></div>
                                 <div class="contractor-competences">
                                     <div class="contractor-competences-header">
                                         <div class="contractor-competences-header-1">Компетенции</div>
@@ -235,9 +246,9 @@
                 <!-- contractor info -->
                 <div class="contractor-info">
                     <ul class="contractor-info-menu">
-                        <li class="active"><a href="#">Контактная информация</a></li>
-                        <li><a href="#">Проекты &nbsp;2<span>/15</span></a></li>
-                        <li><a href="#">Особые пометки</a></li>
+                        <li class="active"><a href="#"><em>Контактная информация</em><em>Контакты</em></a></li>
+                        <li><a href="#"><em>Проекты &nbsp;2<span>/15</span></em><em>Проекты &nbsp;2<span>/15</span></em></a></li>
+                        <li><a href="#"><em>Особые пометки</em><em>пометки</em></a></li>
                     </ul>
 
                     <!-- contractor info tab -->
@@ -282,9 +293,282 @@
 
                         <div class="contractor-info-map">
                             <div id="map"></div>
-                            <script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
                             <script>
-                                ymaps.ready(init);
+                                function initMap() {
+                                    var styleArray = [
+                                      {
+                                        "elementType": "geometry",
+                                        "stylers": [
+                                          {
+                                            "color": "#1d2c4d"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#8ec3b9"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "elementType": "labels.text.stroke",
+                                        "stylers": [
+                                          {
+                                            "color": "#1a3646"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "administrative.country",
+                                        "elementType": "geometry.stroke",
+                                        "stylers": [
+                                          {
+                                            "color": "#4b6878"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "administrative.land_parcel",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#64779e"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "administrative.province",
+                                        "elementType": "geometry.stroke",
+                                        "stylers": [
+                                          {
+                                            "color": "#4b6878"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "landscape.man_made",
+                                        "elementType": "geometry.stroke",
+                                        "stylers": [
+                                          {
+                                            "color": "#334e87"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "landscape.natural",
+                                        "elementType": "geometry",
+                                        "stylers": [
+                                          {
+                                            "color": "#023e58"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "poi",
+                                        "elementType": "geometry",
+                                        "stylers": [
+                                          {
+                                            "color": "#283d6a"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "poi",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#6f9ba5"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "poi",
+                                        "elementType": "labels.text.stroke",
+                                        "stylers": [
+                                          {
+                                            "color": "#1d2c4d"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "poi.park",
+                                        "elementType": "geometry.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#023e58"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "poi.park",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#3C7680"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "road",
+                                        "elementType": "geometry",
+                                        "stylers": [
+                                          {
+                                            "color": "#304a7d"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "road",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#98a5be"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "road",
+                                        "elementType": "labels.text.stroke",
+                                        "stylers": [
+                                          {
+                                            "color": "#1d2c4d"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "road.highway",
+                                        "elementType": "geometry",
+                                        "stylers": [
+                                          {
+                                            "color": "#2c6675"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "road.highway",
+                                        "elementType": "geometry.stroke",
+                                        "stylers": [
+                                          {
+                                            "color": "#255763"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "road.highway",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#b0d5ce"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "road.highway",
+                                        "elementType": "labels.text.stroke",
+                                        "stylers": [
+                                          {
+                                            "color": "#023e58"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "transit",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#98a5be"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "transit",
+                                        "elementType": "labels.text.stroke",
+                                        "stylers": [
+                                          {
+                                            "color": "#1d2c4d"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "transit.line",
+                                        "elementType": "geometry.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#283d6a"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "transit.station",
+                                        "elementType": "geometry",
+                                        "stylers": [
+                                          {
+                                            "color": "#3a4762"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "water",
+                                        "elementType": "geometry",
+                                        "stylers": [
+                                          {
+                                            "color": "#0e1626"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "featureType": "water",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [
+                                          {
+                                            "color": "#4e6d70"
+                                          }
+                                        ]
+                                      }
+                                    ];
+
+                                  var myLatLng = {lat: 55.769341, lng: 37.664334};
+
+                                  var map = new google.maps.Map(document.getElementById('map'), {
+                                    zoom: 17,
+                                    center: myLatLng,
+                                    styles: styleArray
+                                  });
+
+                                  var marker = new google.maps.Marker({
+                                    position: myLatLng,
+                                    map: map,
+                                    title: 'улица Александра Лукьянова, 3'
+                                  });
+                                }
+/*                                function initialize() {
+
+                                  // Create an array of styles.
+
+                                  // Create a new StyledMapType object, passing it the array of styles,
+                                  // as well as the name to be displayed on the map type control.
+                                  var styledMap = new google.maps.StyledMapType(styles,
+                                    {name: "Styled Map"});
+
+                                  // Create a map object, and include the MapTypeId to add
+                                  // to the map type control.
+                                  var mapOptions = {
+                                    zoom: 11,
+                                    center: new google.maps.LatLng(55.769150, 37.664321),
+                                    mapTypeControlOptions: {
+                                      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+                                    }
+                                  };
+                                  var map = new google.maps.Map(document.getElementById('map'),
+                                    mapOptions);
+
+                                  //Associate the styled map with the MapTypeId and set it to display.
+                                  map.mapTypes.set('map_style', styledMap);
+                                  map.setMapTypeId('map_style');
+                                }
+/*                                ymaps.ready(init);
 
                                 var myMap;
 
@@ -303,8 +587,9 @@
                                         preset: 'islands#blueDotIconWithCaption'
                                     });
                                     myMap.geoObjects.add(myPlacemark);
-                                }
+                                }*/
                             </script>
+                            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
                         </div>
                     </div>
                     <!-- contractor info tab END -->
@@ -326,7 +611,7 @@
 
                             <!-- contractor project -->
                             <div class="contractor-project success">
-                                <div class="contractor-project-title">Сайт Синема Стар <span class="success">Успешно завершен</span></div>
+                                <div class="contractor-project-title">Сайт Синема Стар<br /> <span class="success">Успешно завершен</span></div>
                                 <div class="contractor-project-dates">26 августа 2015 <em></em> 30 октября 2015 <span class="success">Сдан вовремя</span></div>
                                 <div class="contractor-project-detail">
                                     <div class="contractor-project-descr">
@@ -346,7 +631,7 @@
 
                             <!-- contractor project -->
                             <div class="contractor-project soon">
-                                <div class="contractor-project-title">Сайт Авеню <span class="soon">В процессе</span></div>
+                                <div class="contractor-project-title">Сайт Авеню<br /> <span class="soon">В процессе</span></div>
                                 <div class="contractor-project-dates">01 февраля 2016 <em></em> <strong>12 декабря 2016</strong> <span class="soon">/ 5 дней осталось</span></div>
                                 <div class="contractor-project-detail">
                                     <div class="contractor-project-descr">
@@ -361,7 +646,7 @@
 
                             <!-- contractor project -->
                             <div class="contractor-project success">
-                                <div class="contractor-project-title">Сайт Синема <span class="success">Завершен</span></div>
+                                <div class="contractor-project-title">Сайт Синема<br /> <span class="success">Завершен</span></div>
                                 <div class="contractor-project-dates">15 сентября 2015 <em></em> 20 сентября 2015 <span class="success">Сдан 03 октября 2015</span></div>
                                 <div class="contractor-project-detail">
                                     <div class="contractor-project-descr">
@@ -454,15 +739,21 @@
                 <div class="employee-ctrl">
                     <div class="employee-ctrl-inner">
                         <a href="#" class="employee-ctrl-item employee-ctrl-item-prev">
-                            Redis
-                            <div class="employee-ctrl-post">Интернет-агентство</div>
+                            <div class="employee-ctrl-item-inner">
+                                Redis
+                                <div class="employee-ctrl-post">Интернет-агентство</div>
+                            </div>
                         </a>
                         <a href="#" class="employee-ctrl-item">
-                            <div class="employee-ctrl-back">Вернуться к списку</div>
+                            <div class="employee-ctrl-item-inner">
+                                <div class="employee-ctrl-back">Вернуться к списку</div>
+                            </div>
                         </a>
                         <a href="#" class="employee-ctrl-item employee-ctrl-item-next">
-                            qSoft
-                            <div class="employee-ctrl-post">Интернет-агентство</div>
+                            <div class="employee-ctrl-item-inner">
+                                qSoft
+                                <div class="employee-ctrl-post">Интернет-агентство</div>
+                            </div>
                         </a>
                     </div>
                 </div>
