@@ -299,6 +299,30 @@
             e.preventDefault();
         });
 
+        $('.contractor-info-tag-text-edit-link a').click(function(e) {
+            var curBlock = $(this).parent().parent();
+            curBlock.find('.contractor-info-tag-text-wrap-inner').html('<div class="form-input"><textarea name="message" rows="5" cols="10">' + curBlock.find('.contractor-info-tag-text-wrap-inner').html() + '</textarea></div>');
+            curBlock.find('.contractor-info-tag-text-edit-link a').hide();
+            curBlock.find('.contractor-info-tag-text-edit-link input').show();
+            e.preventDefault();
+        });
+
+        $('body').on('submit', '.contractor-info-tag-text form', function(e) {
+            var curBlock = $(this).parent();
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                dataType: 'html',
+                cache: false
+            });
+
+            curBlock.find('.contractor-info-tag-text-wrap-inner').html(curBlock.find('.contractor-info-tag-text-wrap-inner textarea').val());
+            curBlock.find('.contractor-info-tag-text-edit-link a').show();
+            curBlock.find('.contractor-info-tag-text-edit-link input').hide();
+            e.preventDefault();
+        });
+
     });
 
     $(window).resize(function() {

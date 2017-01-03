@@ -148,7 +148,7 @@ form {margin:32px 0; padding:20px 100px; background:rgba(255, 255, 255, .05)}
 }
 
 .wrapper {min-width:480px; width:100%; min-height:100%; position:relative; overflow:hidden; background:url(../images/bg.jpg) no-repeat center top; background-size:100%}
-.wrapper-inner {padding:0 0 120px 0}
+.wrapper-inner {padding:0 0 260px 0}
 
 @media (max-width:1199px) {
     .wrapper {background-image:url(../images/bg-mobile.jpg)}
@@ -411,7 +411,7 @@ p.news-date {font:21px/21px MinionPro, serif; color:#0090ae; margin:20px 0 40px 
     .important-item {width:100%; padding-left:0}
 }
 
-.dashboard {max-width:1170px; margin:30px auto -60px auto}
+.dashboard {max-width:1170px; margin:30px auto 0 auto}
 .dashboard .important {margin:0}
 .dashboard .important h2 {font-size:42px; line-height:42px; padding:24px 0 19px 0}
 
@@ -426,7 +426,7 @@ p.news-date {font:21px/21px MinionPro, serif; color:#0090ae; margin:20px 0 40px 
 
 .dashboard-summ {margin:0 -20px}
 .dashboard-summ-inner {display:table; width:100%; border-collapse:separate; border-spacing:10px; table-layout:fixed}
-.dashboard-summ-item {display:table-cell; vertical-align:top; background:rgba(255, 255, 255, .1); width:33.33%; padding:30px}
+.dashboard-summ-item {display:table-cell; vertical-align:top; background:rgba(255, 255, 255, .1); width:33.33%; padding:30px 30px 25px 30px}
 .dashboard-summ-item h2 {margin:0}
 
 @media (max-width:1199px) {
@@ -464,6 +464,9 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .dashboard-summ-list-messages-icon {display:block; text-decoration:none; width:41px; height:41px; background:url(../images/messages-icon.png); position:relative}
 .dashboard-summ-list-messages-icon span {position:absolute; left:-3px; top:-3px; width:20px; height:20px; background:#0090ae; font:12px/20px MinionPro, serif; text-align:center; color:#fff; border-radius:10px}
 
+.dashboard-summ-all .btn {height:28px; line-height:28px; border-color:rgba(0, 144, 174, .2)}
+.dashboard-summ-all .btn:hover {border-color:#fff}
+
 .dashboard-summ-item-activity-link {display:none}
 
 @media (max-width:1199px) {
@@ -474,7 +477,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 }
 
 .dashboard-activity {margin:26px -20px 0 0}
-.dashboard-activity-wrap {position:relative; max-height:370px; overflow:auto}
+.dashboard-activity-wrap {position:relative; max-height:430px; overflow:auto}
 .dashboard-activity-item {border-top:1px solid rgba(255, 255, 255, .1); padding:19px 0 21px 0; margin:0 17px 0 0}
 .dashboard-activity-item:first-child {border-top:none; padding-top:9px}
 .dashboard-activity-item:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -640,7 +643,26 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
     .calendar-item-more {padding:0 0 2px 6px}
 }
 
-footer {height:60px; min-width:480px; position:relative; margin-top:-60px; background:#01426a; text-align:center; color:#fefefe; font:10px/60px MinionPro, serif; text-transform:uppercase}
+footer {height:200px; min-width:480px; max-width:970px; position:relative; margin:-200px auto 0 auto; color:#fefefe; font:11px/15px MinionPro, serif; text-transform:uppercase}
+.footer-about {border:1px solid #fff; text-align:center; padding:14px 45px 15px 45px; letter-spacing:1px}
+.footer-nav {border:1px solid #fff; border-top:none}
+.footer-nav:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.footer-menu {float:left; margin:0; line-height:14px; padding:5px 0 0 50px}
+.footer-menu li {float:left; margin:0; padding:0 0 0 50px}
+.footer-menu li:before {display:none}
+.footer-menu a {color:#fff; text-decoration:none}
+.footer-social {float:right; width:49px; height:38px; border-left:1px solid #fff}
+.footer-social a {display:block; line-height:38px; text-align:center}
+.footer-social img {vertical-align:middle}
+.copyrights {text-align:center; letter-spacing:1px; padding:23px 0 0 0}
+
+@media (max-width:1199px) {
+    footer {padding:0 25px}
+    .footer-about span {display:none}
+    .footer-nav {border-left:none}
+    .footer-menu {display:none}
+    .footer-social {width:25%; box-sizing:border-box}
+}
 
 .auth {width:380px; margin:0 auto; padding:41px 0 104px 0}
 
@@ -1545,11 +1567,14 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .contractor-info-tag {padding:36px 0 7px 0}
 .contractor-info-tag-text {background:rgba(255, 255, 255, .05); border-radius:3px; padding:25px 110px 35px 30px; position:relative; font-size:16px}
 .contractor-info-tag-text:after {content:""; display:block; width:22px; height:12px; background:url(../images/contractor-info-tag-text.png); position:absolute; left:29px; bottom:-12px}
+.contractor-info-tag-text form {margin:0; padding:0; background:none}
+.contractor-info-tag-text form .form-input textarea {font-size:16px}
 .contractor-info-tag-text-wrap {width:100%; display:table}
 .contractor-info-tag-text-wrap-inner {height:40px; vertical-align:middle; display:table-cell}
 .contractor-info-tag-text-edit-link {position:absolute; right:30px; top:50%; margin:-20px 0 0 0; line-height:0}
 .contractor-info-tag-text-edit-link img {opacity:.25}
 .contractor-info-tag-text-edit-link a img {opacity:1}
+.contractor-info-tag-text-edit-link input {display:none; width:41px; vertical-align:top; border:none; border-radius:0; background:url(../images/contractor-info-tag-text-edit.png); margin:0; padding:0; outline:none; height:41px; cursor:pointer; -webkit-appearance:none}
 .contractor-info-tag-autor {padding:22px 0 0 0}
 .contractor-info-tag-autor:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .contractor-info-tag-autor-avatar {float:left; width:55px; line-height:0; padding:0 0 0 10px}

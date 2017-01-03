@@ -543,51 +543,6 @@
                                     title: 'улица Александра Лукьянова, 3'
                                   });
                                 }
-/*                                function initialize() {
-
-                                  // Create an array of styles.
-
-                                  // Create a new StyledMapType object, passing it the array of styles,
-                                  // as well as the name to be displayed on the map type control.
-                                  var styledMap = new google.maps.StyledMapType(styles,
-                                    {name: "Styled Map"});
-
-                                  // Create a map object, and include the MapTypeId to add
-                                  // to the map type control.
-                                  var mapOptions = {
-                                    zoom: 11,
-                                    center: new google.maps.LatLng(55.769150, 37.664321),
-                                    mapTypeControlOptions: {
-                                      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                                    }
-                                  };
-                                  var map = new google.maps.Map(document.getElementById('map'),
-                                    mapOptions);
-
-                                  //Associate the styled map with the MapTypeId and set it to display.
-                                  map.mapTypes.set('map_style', styledMap);
-                                  map.setMapTypeId('map_style');
-                                }
-/*                                ymaps.ready(init);
-
-                                var myMap;
-
-                                function init() {
-                                    myMap = new ymaps.Map('map', {
-                                        center: [55.769150, 37.664321],
-                                        zoom: 17,
-                                        controls: []
-                                    });
-
-                                    myMap.behaviors.disable('scrollZoom');
-
-                                    var myPlacemark = new ymaps.Placemark([55.769150, 37.664321], {
-                                        iconCaption: 'улица Александра Лукьянова, 3'
-                                    }, {
-                                        preset: 'islands#blueDotIconWithCaption'
-                                    });
-                                    myMap.geoObjects.add(myPlacemark);
-                                }*/
                             </script>
                             <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
                         </div>
@@ -673,10 +628,12 @@
                             <!-- contractor info tag -->
                             <div class="contractor-info-tag">
                                 <div class="contractor-info-tag-text">
-                                    <div class="contractor-info-tag-text-wrap">
-                                        <div class="contractor-info-tag-text-inner">Внутрифирменная реклама регулярно раскручивает пул лояльных изданий, не считаясь с затратами. Надо сказать, что анализ рыночных цен спорадически транслирует эксклюзивный рекламный бриф</div>
-                                    </div>
-                                    <div class="contractor-info-tag-text-edit-link"><a href="#"><img src="images/contractor-project-comment-edit.png" alt="" /></a></div>
+                                    <form action="#" method="post">
+                                        <div class="contractor-info-tag-text-wrap">
+                                            <div class="contractor-info-tag-text-wrap-inner">Внутрифирменная реклама регулярно раскручивает пул лояльных изданий, не считаясь с затратами. Надо сказать, что анализ рыночных цен спорадически транслирует эксклюзивный рекламный бриф</div>
+                                        </div>
+                                        <div class="contractor-info-tag-text-edit-link"><a href="#"><img src="images/contractor-project-comment-edit.png" alt="" /></a><input type="submit" value="" /></div>
+                                    </form>
                                 </div>
                                 <div class="contractor-info-tag-autor">
                                     <div class="contractor-info-tag-autor-avatar"><img src="files/avatar-3.jpg" alt="" /></div>
@@ -692,9 +649,9 @@
                             <div class="contractor-info-tag">
                                 <div class="contractor-info-tag-text">
                                     <div class="contractor-info-tag-text-wrap">
-                                        <div class="contractor-info-tag-text-inner">Жизненный цикл продукции экономит популярный анализ зарубежного опыта</div>
+                                        <div class="contractor-info-tag-text-wrap-inner">Жизненный цикл продукции экономит популярный анализ зарубежного опыта</div>
                                     </div>
-                                    <div class="contractor-info-tag-text-edit-link"><a href="#"><img src="images/contractor-project-comment-edit.png" alt="" /></a></div>
+                                    <div class="contractor-info-tag-text-edit-link"><img src="images/contractor-project-comment-edit.png" alt="" /></div>
                                 </div>
                                 <div class="contractor-info-tag-autor">
                                     <div class="contractor-info-tag-autor-avatar"><img src="files/avatar-2.jpg" alt="" /></div>
@@ -709,10 +666,12 @@
                             <!-- contractor info tag -->
                             <div class="contractor-info-tag">
                                 <div class="contractor-info-tag-text">
-                                    <div class="contractor-info-tag-text-wrap">
-                                        <div class="contractor-info-tag-text-inner">Рекламная заставка индуцирует продукт. Тактика выстраивания отношений с коммерсчекими агентами, пренебрегая деталями, сознательно изменяет повторный контакт. Метод изучения рынка обычно правомочен. Точечное воздействие позитивно притягивает креативный анализ рыночных цен. Процесс стратегического планирования охватывает формирование имиджа. Конкурентоспособность без оглядки на авторитеты синхронизирует креатив, учитывая современные тенденции.</div>
-                                    </div>
-                                    <div class="contractor-info-tag-text-edit-link"><a href="#"><img src="images/contractor-project-comment-edit.png" alt="" /></a></div>
+                                    <form action="#" method="post">
+                                        <div class="contractor-info-tag-text-wrap">
+                                            <div class="contractor-info-tag-text-wrap-inner">Рекламная заставка индуцирует продукт. Тактика выстраивания отношений с коммерсчекими агентами, пренебрегая деталями, сознательно изменяет повторный контакт. Метод изучения рынка обычно правомочен. Точечное воздействие позитивно притягивает креативный анализ рыночных цен. Процесс стратегического планирования охватывает формирование имиджа. Конкурентоспособность без оглядки на авторитеты синхронизирует креатив, учитывая современные тенденции.</div>
+                                        </div>
+                                        <div class="contractor-info-tag-text-edit-link"><a href="#"><img src="images/contractor-project-comment-edit.png" alt="" /></a><input type="submit" value="" /></div>
+                                    </form>
                                 </div>
                                 <div class="contractor-info-tag-autor">
                                     <div class="contractor-info-tag-autor-avatar"><img src="files/avatar-3.jpg" alt="" /></div>
@@ -763,7 +722,22 @@
         </div>
         <!-- wrapper END -->
 
-        <footer>© 1999–2016 TASHIR Все права защищены</footer>
+        <footer>
+            <div class="footer-about">«ТАШИР» - многопрофильная группа компаний федерального масштаба<span>,<br />объединяющая более 200 компаний в различных секторах экономики Российской Федерации</span></div>
+            <div class="footer-nav">
+                <ul class="footer-menu">
+                    <li><a href="#">Сотрудники,<br />телефоны</a></li>
+                    <li><a href="#">Организационная<br />структура</a></li>
+                    <li><a href="#">Материалы, веб-ресурсы,<br />медиа-архив</a></li>
+                    <li><a href="#">каталог<br />подрядчиков</a></li>
+                </ul>
+                <div class="footer-social"><a href="#"><img src="images/footer-facebook.png" alt="" /></a></div>
+                <div class="footer-social"><a href="#"><img src="images/footer-youtube.png" alt="" /></a></div>
+                <div class="footer-social"><a href="#"><img src="images/footer-in.png" alt="" /></a></div>
+                <div class="footer-social"><a href="#"><img src="images/footer-flickr.png" alt="" /></a></div>
+            </div>
+            <div class="copyrights">© 1999–2016 TASHIR Все права защищены</div>
+        </footer>
 
     </body>
 </html>
