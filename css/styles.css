@@ -85,6 +85,14 @@ form {margin:32px 0; padding:20px 100px; background:rgba(255, 255, 255, .05)}
 .form-label+.form-field .form-input label.error {margin-right:230px}
 .form-input-hint {position:absolute; right:20px; top:10px; font:12px/20px MinionPro, serif; color:#1ab2d2; text-transform:uppercase}
 
+.form-input input:-webkit-autofill,
+.form-input input:-webkit-autofill:hover,
+.form-input input:-webkit-autofill:focus
+.form-input input:-webkit-autofill,
+.form-input textarea:-webkit-autofill,
+.form-input textarea:-webkit-autofill:hover
+.form-input textarea:-webkit-autofill:focus {-webkit-text-fill-color:#fff; -webkit-box-shadow:0 0 0px 1000px transparent inset; transition:background-color 5000s ease-in-out 0s; background:-webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%)}
+
 .form-file-input {float:left; height:40px; background:url(../images/form-file.png) no-repeat left center; padding:0 0 0 30px; position:relative; overflow:hidden; font:12px/40px MinionPro, serif; text-transform:uppercase; color:#fff; cursor:pointer}
 .form-file-input input {height:200px; position:absolute; top:0; right:0; opacity:0; cursor:pointer; font-size:200px; background:url(../images/blank.gif); -webkit-appearance:none}
 .form-file-input label.error {display:none !important}
