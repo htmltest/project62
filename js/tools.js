@@ -226,18 +226,22 @@
             var curInput = $(this);
             var curGroup = curInput.parents().filter('.contractors-filter-group');
             if (curInput.prop('checked')) {
-                curGroup.addClass('checked');
+                curGroup.find('.contractors-filter-group-sub input').prop('checked', true);
             } else {
-                curGroup.removeClass('checked');
+                curGroup.find('.contractors-filter-group-sub input').prop('checked', false);
             }
         });
 
-        $('.contractors-filter-group-title input:checked').parents().filter('.contractors-filter-group').addClass('checked');
-
-        $('.contractors-filter-reset input').click(function() {
-            window.setTimeout(function() {
-                $('.contractors-filter-group input').change();
-            }, 100);
+        $('.contractors-filter-group-sub input').change(function() {
+            var curInput = $(this);
+            var curGroup = curInput.parents().filter('.contractors-filter-group');
+            if (!curInput.prop('checked')) {
+                curGroup.find('.contractors-filter-group-title input').prop('checked', false);
+            } else {
+                if (curGroup.find('.contractors-filter-group-sub input:checked').length == curGroup.find('.contractors-filter-group-sub input').length) {
+                    curGroup.find('.contractors-filter-group-title input').prop('checked', true);
+                }
+            }
         });
 
         $('.contractors-item-detail-link').click(function(e) {
