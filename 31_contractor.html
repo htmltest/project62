@@ -542,6 +542,21 @@
                                     map: map,
                                     title: 'улица Александра Лукьянова, 3'
                                   });
+
+                                  var geocoder;
+                                  geocoder = new google.maps.Geocoder();
+                                  geocoder.geocode({'address': 'Москва, ул. Новая Басманная, 27'}, function(results, status) {
+                                      if (status == google.maps.GeocoderStatus.OK) {
+                                          map.setCenter(results[0].geometry.location);
+                                          myLatlng_recalc = results[0].geometry.location;
+
+                                          var marker = new google.maps.Marker({
+                                              map: map,
+                                              position: results[0].geometry.location
+                                          });
+                                      }
+                                  });
+
                                 }
                             </script>
                             <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
