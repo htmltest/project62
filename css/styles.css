@@ -808,17 +808,19 @@ footer {height:200px; min-width:480px; max-width:970px; position:relative; margi
 .employee-ctrl-item:hover {color:#cae5f1; text-decoration:none}
 .employee-ctrl-back {text-align:center}
 .employee-ctrl-back:before {content:""; display:inline-block; width:16px; height:9px; vertical-align:middle; background:url(../images/employee-ctrl-back.png); margin:-2px 18px 0 0}
-.employee-ctrl-post {color:#cae5f1}
+.employee-ctrl-name {white-space:nowrap; text-overflow:ellipsis; position:relative; overflow:hidden; width:100%}
+.employee-ctrl-post {color:#cae5f1; white-space:nowrap; text-overflow:ellipsis; position:relative; overflow:hidden; width:100%}
 
 @media (max-width:1199px) {
     .employee-ctrl {margin:0 24px}
-    .employee-ctrl-inner {display:block; padding:83px 0 0 0; position:relative}
+    .employee-ctrl-inner {display:block; padding:84px 0 0 0; position:relative}
+    .employee-ctrl-item {display:block; width:100%; line-height:80px}
     .employee-ctrl-item-prev,
-    .employee-ctrl-item-next {position:absolute; top:1px; box-sizing:border-box; display:table}
+    .employee-ctrl-item-next {position:absolute; top:1px; box-sizing:border-box; display:table; table-layout:fixed}
     .employee-ctrl-item-prev {left:1px; width:calc(50% - 1px)}
     .employee-ctrl-item-next {right:1px; width:calc(50% - 2px)}
-    .employee-ctrl-item-next .employee-ctrl-item-inner {height:80px; display:table-cell; vertical-align:middle}
-    .employee-ctrl-item-prev .employee-ctrl-item-inner {height:80px; display:table-cell; vertical-align:middle}
+    .employee-ctrl-item-next .employee-ctrl-item-inner {width:100%; height:80px; line-height:20px; display:table-cell; vertical-align:middle; padding:0 40px 0 0}
+    .employee-ctrl-item-prev .employee-ctrl-item-inner {width:100%; height:80px; line-height:20px; display:table-cell; vertical-align:middle; padding:0 0 0 40px}
 }
 
 .structure {margin:0 auto; max-width:1170px; padding:57px 0 0 0}
