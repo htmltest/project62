@@ -2,6 +2,23 @@
 
     $(document).ready(function() {
 
+        var userMenuTimer = null;
+        $('.header-user-menu').mouseover(function() {
+            window.clearTimeout(userMenuTimer);
+            userMenuTimer = null;
+
+            $('.header-user-menu').addClass('hover');
+        });
+
+        $('.header-user-menu').mouseout(function() {
+            window.clearTimeout(userMenuTimer);
+            userMenuTimer = null;
+
+            userMenuTimer = window.setTimeout(function() {
+                $('.header-user-menu.hover').removeClass('hover');
+            }, 300);
+        });
+
         $('form').each(function() {
             initForm($(this));
         });
@@ -18,20 +35,39 @@
 
         $('.search-close').click(function(e) {
             $('.search-input input').val('').blur();
+            $('.search-results').hide();
             e.preventDefault();
         });
 
-        $('.search-input input').on('keyup', function() {
-            if ($(this).val() != '') {
-                $.ajax({
-                    type: 'POST',
-                    url: $('.search form').attr('action'),
-                    data: $('.search form').serialize(),
-                    dataType: 'html',
-                    cache: false
-                }).done(function(html) {
-                    $('.search-results-list').html(html);
-                });
+        var searchTimer = null;
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.search-inner').length == 0) {
+                window.clearTimeout(searchTimer);
+                searchTimer = null;
+
+                $('.search').removeClass('focus');
+                $('.search-results').hide();
+            }
+        });
+
+        $('.search-input input').on('keyup', function(e) {
+            window.clearTimeout(searchTimer);
+            searchTimer = null;
+
+            if ($(this).val() != '' && $(this).val().length > 2) {
+                searchTimer = window.setTimeout(function() {
+                    $.ajax({
+                        type: 'POST',
+                        url: $('.search form').attr('action'),
+                        data: $('.search form').serialize(),
+                        dataType: 'html',
+                        cache: false
+                    }).done(function(html) {
+                        $('.search-results').show();
+                        $('.search-results-list').html(html);
+                    });
+                }, 300);
             } else {
                 $('.search-results-list').html('');
             }
