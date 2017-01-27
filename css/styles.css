@@ -328,6 +328,7 @@ nav ul li a:hover {border-bottom-color:#0090ae}
 .search-results-all:before {content:""; display:block; width:180px; position:absolute; left:0; top:0; bottom:0; background:#f2f5f7}
 .search-results-all a {color:#01426a; text-decoration:underline}
 .search-results-all a:hover {text-decoration:none}
+.search-results-loading {display:none; position:absolute; left:0; top:0; bottom:0; right:0; background:rgba(255, 255, 255, .8) url(../images/search-results-loading.gif) no-repeat center}
 
 @media (max-width:1199px) {
     .search-inner {padding:0}
@@ -471,7 +472,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .dashboard-summ-list-messages-icon {display:block; text-decoration:none; width:41px; height:41px; background:url(../images/messages-icon.png); position:relative}
 .dashboard-summ-list-messages-icon span {position:absolute; left:-3px; top:-3px; width:20px; height:20px; background:#0090ae; font:12px/20px MinionPro, serif; text-align:center; color:#fff; border-radius:10px}
 
-.dashboard-summ-all .btn {height:28px; line-height:28px; border-color:rgba(0, 144, 174, .2)}
+.dashboard-summ-all .btn {width:148px; margin:0 auto; height:28px; line-height:28px; border-color:rgba(0, 144, 174, .2)}
 .dashboard-summ-all .btn:hover {border-color:#fff}
 
 .dashboard-summ-item-activity-link {display:none}
@@ -500,7 +501,8 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .dashboard-activity-item-date {display:table-cell; vertical-align:top; padding:11px 0 0 10px; white-space:nowrap; color:#0090ae}
 
 .dashboard-events h2 {text-align:center; position:relative; font-size:42px; line-height:42px; margin:73px 0 15px 0}
-.dashboard-events h2 .btn {position:absolute; right:0; top:0; width:151px; height:30px; line-height:30px}
+.dashboard-events h2 .btn {position:absolute; right:0; top:0; width:149px; height:30px; line-height:30px; border-color:rgba(0, 144, 174, .2)}
+.dashboard-events h2 .btn:hover {border-color:#0090ae}
 .dashboard-events > .btn {display:none}
 .dashboard-events-list {padding:43px 84px 63px 84px; background:rgba(255, 255, 255, .05); margin:0 -10px}
 .dashboard-events-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -518,7 +520,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 
 @media (max-width:1199px) {
     .dashboard-events h2 .btn {display:none}
-    .dashboard-events > .btn {display:block; margin:-70px 30px 0 30px}
+    .dashboard-events > .btn {display:block; margin:-70px auto 0 auto; width:151px; height:28px; line-height:28px}
     .dashboard-events-list {padding:30px 30px 100px 30px; margin:0}
     .dashboard-events-item {width:100%; padding:23px 0 0 0}
     .dashboard-events-item:first-child {padding:0 0 8px 0; width:100%}
@@ -545,7 +547,9 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .dashboard-news-menu li.active a {color:#fff}
 .dashboard-news h2 {text-align:center; position:relative}
 .dashboard-news h2 .btn,
-.dashboard-news-header .btn {position:absolute; right:0; top:-4px; width:151px; height:38px; line-height:38px}
+.dashboard-news-header .btn {position:absolute; right:0; top:-1px; width:149px; height:30px; line-height:30px; border-color:rgba(0, 144, 174, .2)}
+.dashboard-news h2 .btn:hover,
+.dashboard-news-header .btn:hover {border-color:#0090ae}
 .dashboard-news > .btn {display:none}
 .dashboard-news-list {display:table; width:100%; margin:48px 0 0 0}
 .dashboard-news-item {display:table-cell; vertical-align:top; border-left:1px solid rgba(255, 255, 255, .1); width:33.33%; padding:0 45px}
@@ -564,7 +568,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 @media (max-width:1199px) {
     .dashboard-news h2 .btn {display:none}
     .dashboard-news-header .btn {display:none}
-    .dashboard-news > .btn {display:block; margin-top:33px}
+    .dashboard-news > .btn {display:block; margin-top:33px; margin-left:auto; margin-right:auto; width:151px; height:28px; line-height:28px}
     .dashboard-news-menu li {font-size:16px}
     .dashboard-news-menu li.active {font-size:28px}
 
@@ -599,7 +603,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 
 @media (max-width:1199px) {
     .news-list {margin:0; padding:0 30px 30px 30px}
-    .news-list .btn {display:block; letter-spacing:0}
+    .news-list .btn {display:block; letter-spacing:0; margin-left:auto; margin-right:auto; width:151px; height:28px; line-height:28px}
     .news-item {width:100%; padding:28px 0 25px 0; border-top:1px solid rgba(255, 255, 255, .1)}
     .news-item:first-child {border-top:none}
     .news-item-photo {display:none}
@@ -1277,8 +1281,10 @@ h1+.btn-edit {margin:-8px 0 0 52px}
     .media-group {width:100%}
 }
 
-.megaplan {max-width:1170px; padding:0 15px; margin:0 auto}
-.megaplan h1 {text-align:center; font-size:42px; line-height:42px; margin:0; padding:61px 0 37px 0}
+.megaplan {max-width:1170px; padding:0 15px; margin:0 auto; position:relative}
+.megaplan h1 {text-align:center; font-size:42px; line-height:42px; margin:0; padding:61px 0 37px 0; position:relative}
+.megaplan-update {position:absolute; right:0; top:63px; width:149px; height:30px; line-height:30px}
+.megaplan-update:before {content:""; display:inline-block; width:13px; height:13px; background:url(../images/megaplan-update.png); margin:-2px 12px 0 0; vertical-align:middle}
 .megaplan-list {margin:0 -10px; padding:30px 110px; background:rgba(255, 255, 255, .05)}
 .megaplan-item {border-top:1px solid rgba(255, 255, 255, .1); padding:10px 0}
 .megaplan-item:first-child {border-top:none}
@@ -1293,9 +1299,26 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .megaplan-item-anonce {color:#cae5f1; padding:1px 0 0 0}
 .megaplan-item-date {color:#0090ae; padding:9px 0 0 0}
 
+.megaplan-loading {display:none; position:absolute; left:0; top:0; bottom:0; right:0; background:rgba(1, 66, 106, .8) url(../images/megaplan-loading.gif) no-repeat center}
+
 @media (max-width:1199px) {
     .megaplan {padding:0 25px}
-    .megaplan-list {margin:0; padding:30px}
+    .megaplan-list {margin:0; padding:100px 30px 30px 30px}
+    .megaplan-update {top:auto; bottom:-79px; width:auto; left:30px; right:30px; height:38px; line-height:38px}
+    .megaplan-update-empty {bottom:-259px}
+}
+
+.megaplan-empty {text-align:center; padding:129px 0 138px 0}
+.megaplan-empty-title br {display:none}
+.megaplan-empty-link {text-transform:uppercase; font:19px/22px MinionPro, serif; padding:31px 0 0 0}
+.megaplan-empty-link a {color:#fff}
+.megaplan-empty-link a:before {content:""; display:inline-block; vertical-align:middle; width:22px; height:22px; background:url(../images/megaplan-empty-link.png); margin:-2px 10px 0 0}
+
+@media (max-width:1199px) {
+    .megaplan-empty {padding:36px 0 194px 0}
+    .megaplan-empty-title {font-size:16px}
+    .megaplan-empty-title br {display:block}
+    .megaplan-empty-link {display:none}
 }
 
 .contractors {max-width:1190px; padding:0 15px; margin:0 auto}
@@ -1312,55 +1335,58 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 
 .contractors h1 {text-align:center; font-size:42px; line-height:42px; margin:0; padding:61px 0 37px 0}
 
-.contractors-filter {float:left; width:230px; background:#fff; padding:30px 30px 0 30px}
-.contractors-filter h2 {margin:0; color:#01426a}
-.contractors-filter form {margin:0; padding:0}
-.contractors-filter-group {border-top:1px solid #eaeaea; padding:17px 0 18px 0}
-.contractors-filter-group:first-child {border-top:none}
+.contractors-filter {float:left; width:290px}
+.contractors-filter h2 {margin:0; color:#fff; padding:30px 30px 5px 30px; background:rgba(255, 255, 255, .05)}
+.contractors-filter form {margin:0; padding:0; background:none}
+.contractors-filter-group {margin-top:1px; padding:17px 30px 18px 20px; background:rgba(255, 255, 255, .05)}
+.contractors-filter-group:first-child {margin-top:0}
 .contractors-filter-group-title:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .contractors-filter-group-title label {float:left; margin:0; padding:0; cursor:pointer}
 .contractors-filter-group-title label input {display:none}
-.contractors-filter-group-title label span {display:block; position:relative; padding:0 10px 0 30px; height:25px; border-radius:3px; text-transform:uppercase; font:16px/27px MinionPro, serif; color:#01426a}
-.contractors-filter-group-title label input:checked+span {background:#01426a; color:#fff}
-.contractors-filter-group-title label span:before {content:""; display:block; width:11px; height:11px; background:url(../images/contractors-filter.png); position:absolute; left:10px; top:7px}
-.contractors-filter-group-title label input:checked+span:before {background-position:left -11px}
-.contractors-filter-group-title label span em {font-style:normal; color:#00beb1; margin:0 0 0 5px}
-.contractors-filter-group-title label input:checked+span em {color:#97edff}
-.contractors-filter-group-title a {float:right; width:29px; height:24px; position:relative}
+.contractors-filter-group-title label span {display:block; position:relative; padding:0 10px; height:25px; border-radius:3px; text-transform:uppercase; font:16px/27px MinionPro, serif; color:#fff}
+.contractors-filter-group-title label input:checked+span {background:#01426a}
+.contractors-filter-group-title label span em {font-style:normal; color:#0090ae; margin:0 0 0 5px}
+.contractors-filter-group-title a {float:right; margin:0 -10px 0 0; width:29px; height:24px; position:relative}
 .contractors-filter-group-title a:before {content:""; display:block; width:9px; height:6px; position:absolute; left:50%; top:50%; margin:-1px 0 0 -4px; background:url(../images/contractors-filter-arrows.png)}
 .contractors-filter-group.open .contractors-filter-group-title a:before {background-position:left -6px}
 
-.contractors-filter-group-sub {display:none; padding:8px 0 1px 23px}
+.contractors-filter-group-sub {display:none; padding:8px 0 1px 0}
 .contractors-filter-group.open .contractors-filter-group-sub {display:block}
 .contractors-filter-group-sub-item {padding:9px 0 0 0}
 .contractors-filter-group-sub-item:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .contractors-filter-group-sub-item label {float:left; margin:0; padding:0; cursor:pointer}
 .contractors-filter-group-sub-item label input {display:none}
-.contractors-filter-group-sub-item label span {display:block; position:relative; padding:0 10px 0 30px; height:19px; border:1px solid #e5f4f7; border-radius:3px; font-size:14px; line-height:19px; color:#777}
-.contractors-filter-group-sub-item label input:checked+span {background:#0090ae; color:#fff; border-color:#0090ae}
-.contractors-filter-group-sub-item label span:before {content:""; display:block; width:11px; height:11px; background:url(../images/contractors-filter.png); position:absolute; left:7px; top:4px}
-.contractors-filter-group.checked .contractors-filter-group-sub-item label span:before {opacity:.25}
-.contractors-filter-group-sub-item label input:checked+span:before {background-position:left -11px}
+.contractors-filter-group-sub-item label span {display:block; position:relative; padding:0 10px; height:21px; border-radius:3px; font-size:14px; line-height:21px; color:#cae5f1}
+.contractors-filter-group-sub-item label input:checked+span {background:#0090ae; color:#fff}
 .contractors-filter-group-sub-item label span em {font-style:normal; color:#00beb1; font-family:MinionPro, serif; margin:0 0 0 5px}
 .contractors-filter-group-sub-item label input:checked+span em {color:#97edff}
 
-.contractors-filter-reset {text-align:center; border-top:1px solid #eaeaea; padding:19px 0 21px 0}
-.contractors-filter-reset input {vertical-align:top; border:none; overflow:visible; border-radius:0; background:none; margin:0; padding:0; outline:none; color:#01426a; text-align:center; cursor:pointer; text-transform:uppercase; font:12px/18px MinionPro, serif; -webkit-appearance:none; transition:all .3s ease}
+.contractors-filter-submit {text-align:center; margin:1px 0 0 0}
+.contractors-filter-submit input {vertical-align:top; border:none; overflow:visible; border-radius:0; background:rgba(255, 255, 255, .05); margin:0; padding:0; height:55px; width:100%; outline:none; color:#fff; text-align:center; cursor:pointer; text-transform:uppercase; font:12px/55px MinionPro, serif; -webkit-appearance:none; transition:all .3s ease}
+.contractors-filter-submit input:hover {background:rgba(255, 255, 255, .1)}
 .contractors-filter-close {display:none}
 
 @media (max-width:1199px) {
     .contractors h1 {font-size:30px; line-height:30px; padding:28px 0 37px 0}
     .contractors-filter {display:none}
-    .contractors-filter-mobile-open .contractors-filter {display:block; float:none; position:absolute; left:0; top:140px; right:0; bottom:50px; z-index:98; width:auto; padding:40px 55px 40px 55px; overflow:auto}
+    .contractors-filter-mobile-open .contractors-filter {display:block; float:none; position:absolute; left:0; top:140px; right:0; bottom:50px; z-index:98; width:auto; padding:0; overflow:auto}
     .contractors-filter-mobile-open footer {display:none}
     .contractors-filter h2 {display:none}
+    .contractors-filter-group {padding:17px 55px 18px 55px}
+    .contractors-filter-group:first-child {padding-top:37px}
     .contractors-filter-group-title label span {font-size:20px}
     .contractors-filter-group-sub-item label span {font-size:16px}
+    .contractors-filter-group-sub-item {padding:9px 0 10px 0}
     .contractors-filter-ctrl {position:fixed; z-index:99; left:0; bottom:0; right:0; height:50px; background:#0090ae; padding:0 55px}
-    .contractors-filter-reset {padding:0; border-top:none; float:left}
-    .contractors-filter-reset input {color:#fff; font-size:16px; height:50px; line-height:52px; padding:0 0 0 20px; background:url(../images/reset.png) no-repeat left center}
+    .contractors-filter-submit {padding:0; border-top:none; float:left; background:none}
+    .contractors-filter-submit input,
+    .contractors-filter-submit input:hover {color:#fff; font-size:16px; height:50px; line-height:52px; padding:0 0 0 20px; background:url(../images/reset.png) no-repeat left center}
     .contractors-filter-close {display:block; float:right; font:16px/52px MinionPro, serif; color:#fff; text-decoration:none; text-transform:uppercase; height:50px; padding:0 26px 0 0; background:url(../images/contractors-filter-close.png) no-repeat right center}
     .contractors-filter-close:hover {text-decoration:none}
+
+    .contractors-filter-mobile-open .contractors h1,
+    .contractors-filter-mobile-open .contractors-list,
+    .contractors-filter-mobile-open .contractors-filter-mobile-link {display:none}
 }
 
 .contractors-list {margin:0 0 0 290px}
@@ -1368,7 +1394,7 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .contractors-list-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .contractors-item {float:left; width:50%; padding:0 0 10px 10px; box-sizing:border-box}
 .contractors-item:nth-child(2n+1) {clear:left}
-.contractors-item-anonce {background:rgba(255, 255, 255, .05); padding:30px}
+.contractors-item-anonce {background:rgba(255, 255, 255, .05); padding:30px; position:relative}
 .contractors-item-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .contractors-item-logo {float:right; width:170px; line-height:0}
 .contractors-item-logo img {display:block; width:100%}
@@ -1377,14 +1403,22 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .contractors-item-title a:hover {text-decoration:none}
 .contractors-item-tags {margin:0 200px 0 0; color:#cae5f1; padding:15px 0 0 0}
 .contractors-item-tags a {color:#cae5f1}
-.contractors-item-tags span {color:#0090ae; font-family:MinionPro, serif}
-.contractors-item-ctrl {padding:10px 0 0 0}
+.contractors-item-tags-more {position:relative; display:inline-block}
+.contractors-item-tags-more-title {color:#0090ae; font-family:MinionPro, serif}
+@media (min-width:1200px) {
+    .contractors-item-tags-more:hover ul {display:block}
+}
+.contractors-item-tags-more ul {display:none; position:absolute; left:-15px; top:-71px; width:115px; padding:11px 15px 14px 15px; z-index:99; background:#fff; color:#585858; margin:0}
+.contractors-item-tags-more ul li {margin:0; padding:0}
+.contractors-item-tags-more ul li:before {display:none}
+.contractors-item-tags-more ul li a {color:#585858}
+.contractors-item-ctrl {padding:10px 0 0 0; height:40px}
 .contractors-item-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.contractors-item-detail-link {float:right; width:70px; height:40px; position:relative; background:rgba(255, 255, 255, .05)}
+.contractors-item-detail-link {display:block; position:absolute; right:30px; bottom:30px; width:70px; height:40px; background:rgba(255, 255, 255, .05)}
 .contractors-item-detail-link:after {content:""; display:block; width:15px; height:9px; position:absolute; left:28px; top:15px; background:url(../images/contractors-item-detail-link.png)}
 .contractors-item.open .contractors-item-detail-link:after {background-position:left -9px}
-.contractors-item.open .contractors-item-detail-link:before {content:""; display:block; width:100%; height:31px; position:absolute; left:0; top:100%; background:rgba(255, 255, 255, .05)}
-.contractors-item-projects {margin:0 200px 0 0; font-size:14px; line-height:40px; text-transform:uppercase}
+.contractors-item.open .contractors-item-detail-link:before {content:""; display:block; width:100%; height:30px; position:absolute; left:0; top:100%; background:rgba(255, 255, 255, .05)}
+.contractors-item-projects {position:absolute; left:30px; bottom:30px; font-size:14px; line-height:40px; text-transform:uppercase}
 .contractors-item-projects a {color:#fff; text-decoration:underline}
 .contractors-item-projects a:hover {text-decoration:none}
 .contractors-item-projects span {font-family:MinionPro, serif; color:#fff; margin:0 0 0 8px}
@@ -1393,6 +1427,12 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 @media (max-width:1199px) {
     .contractors-list {margin:0}
     .contractors-item {width:100%}
+    .contractors-item-tags-more-title {display:none}
+    .contractors-item-tags-more ul {display:block; position:static; left:auto; top:auto; width:auto; padding:0; z-index:auto; background:none; color:#cae5f1; transform:none}
+    .contractors-item-tags-more ul li:nth-child(1),
+    .contractors-item-tags-more ul li:nth-child(2),
+    .contractors-item-tags-more ul li:nth-child(3) {display:none}
+    .contractors-item-tags-more ul li a {color:#cae5f1}
 }
 
 .contractors-item-detail {display:none; background:rgba(255, 255, 255, .1); padding:30px; margin-right:calc(-100% - 10px)}
@@ -1601,4 +1641,26 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 
 @media (max-width:1199px) {
     .contractor-info-tag-add {margin:0 -30px; padding:30px}
+}
+
+.search-form form {padding:0; background:none; margin:26px 0 16px 0; position:relative}
+.search-form .form-input input {color:#cae5f1; padding-right:55px; height:50px; border-radius:25px; padding-top:14px; padding-bottom:14px; font-size:18px; font-family:MinionPro, serif; color:#fff}
+.search-form .form-submit {position:absolute; right:1px; top:1px; margin:0}
+.search-form .form-submit input {width:55px; height:48px; border:none; background:url(../images/search-form.png) no-repeat center; transition:none}
+
+.search-page-result {border-bottom:1px solid rgba(228, 231, 233, .1); padding:39px 0 41px 0}
+.search-page-result-title {font:18px/20px MinionPro, serif}
+.search-page-result-title a {color:#fff; text-decoration:underline}
+.search-page-result-title a:hover {text-decoration:none}
+.search-page-result-anonce {padding:19px 0 0 0}
+.search-page-result-anonce strong {color:#fff}
+.search-page-result-date {color:#84a1ae; padding:20px 0 0 0}
+.search-page-result-path {color:#fff}
+.search-page-result-path span {display:inline-block; vertical-align:middle; width:7px; height:11px; background:url(../images/search-page-result-path.png); margin:-2px 10px 0 10px}
+
+.search-page-result+.pager {margin-top:60px}
+
+@media (max-width:1199px) {
+    .search-page-result-title {font-size:21px}
+    .search-page-result {font-size:16px}
 }

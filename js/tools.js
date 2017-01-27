@@ -57,6 +57,7 @@
 
             if ($(this).val() != '' && $(this).val().length > 2) {
                 searchTimer = window.setTimeout(function() {
+                    $('.search-results-loading').show();
                     $.ajax({
                         type: 'POST',
                         url: $('.search form').attr('action'),
@@ -64,6 +65,7 @@
                         dataType: 'html',
                         cache: false
                     }).done(function(html) {
+                        $('.search-results-loading').hide();
                         $('.search-results').show();
                         $('.search-results-list').html(html);
                     });
@@ -363,6 +365,30 @@
             e.preventDefault();
         });
 
+        $('.megaplan-update').click(function(e) {
+            $('.megaplan-loading').show();
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('href'),
+                dataType: 'html',
+                cache: false
+            }).done(function(html) {
+                $('.megaplan-loading').hide();
+                $('.megaplan-list').html(html);
+                if ($('.megaplan-empty').length == 0) {
+                    $('.megaplan-update').removeClass('megaplan-update-empty');
+                } else {
+                    $('.megaplan-update').addClass('megaplan-update-empty');
+                }
+            });
+            e.preventDefault();
+        });
+
+        $('.megaplan-empty-link a').click(function(e) {
+            $('.megaplan-update').click();
+            e.preventDefault();
+        });
+
     });
 
     $(window).resize(function() {
@@ -426,5 +452,32 @@
             }
         });
     }
+
+    $(window).on('load resize', function() {
+
+        $('.contractors-list').each(function() {
+            var curList = $(this);
+            curList.find('.contractors-item-anonce').css({'min-height': 0 + 'px'});
+
+            curList.find('.contractors-item-anonce').each(function() {
+                var curBlock = $(this);
+                var curHeight = curBlock.height();
+                var curTop = curBlock.offset().top;
+
+                curList.find('.contractors-item-anonce').each(function() {
+                    var otherBlock = $(this);
+                    if (otherBlock.offset().top == curTop) {
+                        var newHeight = otherBlock.height();
+                        if (newHeight > curHeight) {
+                            curBlock.css({'min-height': newHeight + 'px'});
+                        } else {
+                            otherBlock.css({'min-height': curHeight + 'px'});
+                        }
+                    }
+                });
+            });
+        });
+
+    });
 
 })(jQuery);
