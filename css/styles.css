@@ -421,7 +421,7 @@ p.news-date {font:21px/21px MinionPro, serif; color:#0090ae; margin:20px 0 40px 
 
 .dashboard {max-width:1170px; margin:30px auto 0 auto}
 .dashboard .important {margin:0}
-.dashboard .important h2 {font-size:42px; line-height:42px; padding:24px 0 19px 0}
+.dashboard .important h2 {font-size:38px; line-height:42px; padding:24px 0 19px 0}
 
 @media (max-width:1199px) {
     .dashboard {margin-left:25px; margin-right:25px; margin-top:40px}
@@ -500,7 +500,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .dashboard-activity-item-section a:hover {color:#fff}
 .dashboard-activity-item-date {display:table-cell; vertical-align:top; padding:11px 0 0 10px; white-space:nowrap; color:#0090ae}
 
-.dashboard-events h2 {text-align:center; position:relative; font-size:42px; line-height:42px; margin:73px 0 15px 0}
+.dashboard-events h2 {text-align:center; position:relative; font-size:38px; line-height:42px; margin:73px 0 15px 0}
 .dashboard-events h2 .btn {position:absolute; right:0; top:0; width:149px; height:30px; line-height:30px; border-color:rgba(0, 144, 174, .2)}
 .dashboard-events h2 .btn:hover {border-color:#0090ae}
 .dashboard-events > .btn {display:none}
@@ -541,7 +541,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .dashboard-news-header {text-align:center; position:relative; margin:83px 0 0 0}
 .dashboard-news-menu {margin:0; display:inline-block; vertical-align:top}
 .dashboard-news-menu li {float:left; margin:0 10px; padding:0 5px 12px 5px; font:21px/42px MinionPro, serif; text-transform:uppercase}
-.dashboard-news-menu li.active {font-size:42px; border-bottom:3px solid #0090ae}
+.dashboard-news-menu li.active {font-size:38px; border-bottom:3px solid #0090ae}
 .dashboard-news-menu li:before {display:none}
 .dashboard-news-menu li a {text-decoration:none}
 .dashboard-news-menu li.active a {color:#fff}
@@ -614,7 +614,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 }
 
 .calendar {margin:20px -15px 80px -15px}
-.calendar h2 {margin:0 0 57px 0; color:#fff; font-size:42px; line-height:42px; text-align:center}
+.calendar h2 {margin:0 0 57px 0; color:#fff; font-size:38px; line-height:42px; text-align:center}
 .calendar-month {position:relative; background:rgba(255, 255, 255, .05)}
 .calendar-month-current {text-align:center; color:#fff; text-transform:uppercase; font:21px/60px MinionPro, serif}
 .calendar-month-prev,
@@ -654,24 +654,26 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
     .calendar-item-more {padding:0 0 2px 6px}
 }
 
-footer {height:200px; min-width:480px; max-width:970px; position:relative; margin:-200px auto 0 auto; color:#fefefe; font:11px/15px MinionPro, serif; text-transform:uppercase}
-.footer-about {border:1px solid #fff; text-align:center; padding:14px 45px 15px 45px; letter-spacing:1px}
+footer {height:200px; min-width:480px; max-width:670px; position:relative; margin:-200px auto 0 auto; color:#fefefe; font-size:10px; line-height:15px; text-transform:uppercase}
+.footer-about {border:1px solid #fff; text-align:center; padding:12px 30px 17px 30px; letter-spacing:1px; color:rgba(254, 254, 254, .5)}
 .footer-nav {border:1px solid #fff; border-top:none}
 .footer-nav:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.footer-menu {float:left; margin:0; line-height:14px; padding:5px 0 0 50px}
-.footer-menu li {float:left; margin:0; padding:0 0 0 50px}
+.footer-menu {float:left; margin:0; line-height:38px; width:468px; font-size:0; line-height:0; letter-spacing:0; text-align:center}
+.footer-menu li {display:inline-block; vertical-align:top; font-size:11px; line-height:38px; letter-spacing:0; margin:0; padding:0 0 0 32px}
+.footer-menu li:first-child {padding:0}
 .footer-menu li:before {display:none}
 .footer-menu a {color:#fff; text-decoration:none}
 .footer-social {float:right; width:49px; height:38px; border-left:1px solid #fff}
 .footer-social a {display:block; line-height:38px; text-align:center}
 .footer-social img {vertical-align:middle}
-.copyrights {text-align:center; letter-spacing:1px; padding:23px 0 0 0}
+.copyrights {text-align:center; letter-spacing:1px; padding:21px 0 0 0}
 
 @media (max-width:1199px) {
     footer {padding:0 25px}
+    .footer-about {padding-left:50px; padding-right:50px; font-size:11px}
     .footer-about span {display:none}
     .footer-nav {border-left:none}
-    .footer-menu {display:none}
+    .footer-menu {width:100%; border-left:1px solid #fff; border-bottom:1px solid #fff}
     .footer-social {width:25%; box-sizing:border-box}
 }
 
