@@ -128,16 +128,14 @@ form {margin:32px 0; padding:20px 100px; background:rgba(255, 255, 255, .05)}
 .form-radio.checked span:after {content:""; display:block; width:5px; height:5px; background:#fff; border-radius:3px; position:absolute; left:5px; top:5px}
 
 .form-submit {margin:60px 0 20px 0}
-.form-submit input {width:100%; vertical-align:top; border:1px solid rgba(221, 224, 229, .2); border-radius:0; background:none; margin:0; padding:0; outline:none; height:40px; color:#fff; text-align:center; cursor:pointer; text-transform:uppercase; font:15px/38px MinionPro, serif; -webkit-appearance:none; transition:all .3s ease}
-.form-submit input:hover {border-color:#fff}
-.form-submit input:active {border-color:#fff; background:#fff; color:#01426a}
+.form-submit input {width:100%; vertical-align:top; border:1px solid #fff; border-radius:0; background:none; margin:0; padding:0; outline:none; height:40px; color:#fff; text-align:center; cursor:pointer; text-transform:uppercase; font:15px/38px MinionPro, serif; -webkit-appearance:none; transition:all .3s ease}
+.form-submit input:hover {border-color:#fff; background:#fff; color:#01426a}
 
 .form-required {margin:28px 0 12px 0; text-align:center}
 .form-required span {color:#ed1c24}
 
-.btn {display:block; border:1px solid rgba(221, 224, 229, .2); height:38px; color:#fff; text-align:center; text-transform:uppercase; font:12px/38px MinionPro, serif; transition:all .3s ease}
-.btn:hover {border-color:#fff; text-decoration:none; color:#fff}
-.btn:active {border-color:#fff; background:#fff; color:#01426a}
+.btn {display:block; border:1px solid #fff; height:38px; color:#fff; text-align:center; text-transform:uppercase; font:12px/38px MinionPro, serif; transition:all .3s ease}
+.btn:hover {border-color:#fff; background:#fff; color:#01426a; text-decoration:none}
 
 .pager {font-size:0; line-height:0; letter-spacing:-1px; text-align:center; margin:40px 0 20px 0}
 .pager a,
@@ -472,8 +470,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .dashboard-summ-list-messages-icon {display:block; text-decoration:none; width:41px; height:41px; background:url(../images/messages-icon.png); position:relative}
 .dashboard-summ-list-messages-icon span {position:absolute; left:-3px; top:-3px; width:20px; height:20px; background:#0090ae; font:12px/20px MinionPro, serif; text-align:center; color:#fff; border-radius:10px}
 
-.dashboard-summ-all .btn {width:148px; margin:0 auto; height:28px; line-height:28px; border-color:rgba(0, 144, 174, .2)}
-.dashboard-summ-all .btn:hover {border-color:#fff}
+.dashboard-summ-all .btn {width:148px; margin:0 auto; height:28px; line-height:28px}
 
 .dashboard-summ-item-activity-link {display:none}
 
@@ -501,8 +498,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .dashboard-activity-item-date {display:table-cell; vertical-align:top; padding:11px 0 0 10px; white-space:nowrap; color:#0090ae}
 
 .dashboard-events h2 {text-align:center; position:relative; font-size:38px; line-height:42px; margin:73px 0 15px 0}
-.dashboard-events h2 .btn {position:absolute; right:0; top:0; width:149px; height:30px; line-height:30px; border-color:rgba(0, 144, 174, .2)}
-.dashboard-events h2 .btn:hover {border-color:#0090ae}
+.dashboard-events h2 .btn {position:absolute; right:0; top:0; width:149px; height:30px; line-height:30px}
 .dashboard-events > .btn {display:none}
 .dashboard-events-list {padding:43px 84px 63px 84px; background:rgba(255, 255, 255, .05); margin:0 -10px}
 .dashboard-events-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -547,9 +543,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .dashboard-news-menu li.active a {color:#fff}
 .dashboard-news h2 {text-align:center; position:relative}
 .dashboard-news h2 .btn,
-.dashboard-news-header .btn {position:absolute; right:0; top:-1px; width:149px; height:30px; line-height:30px; border-color:rgba(0, 144, 174, .2)}
-.dashboard-news h2 .btn:hover,
-.dashboard-news-header .btn:hover {border-color:#0090ae}
+.dashboard-news-header .btn {position:absolute; right:0; top:-1px; width:149px; height:30px; line-height:30px}
 .dashboard-news > .btn {display:none}
 .dashboard-news-list {display:table; width:100%; margin:48px 0 0 0}
 .dashboard-news-item {display:table-cell; vertical-align:top; border-left:1px solid rgba(255, 255, 255, .1); width:33.33%; padding:0 45px}
@@ -864,22 +858,26 @@ footer {height:200px; min-width:480px; max-width:670px; position:relative; margi
 
 .structure-level-item-detail {position:absolute; left:-9999px; top:-9999px; width:430px; padding:20px 10px 20px 30px; background:#fff; color:#777; z-index:9}
 .structure-level-item.view .structure-level-item-detail {left:auto; right:0; top:0}
+.structure-level-item.view .structure-level-item-detail.to-bottom {top:auto; bottom:0}
 .structure-level-item-detail a {color:#0090ae}
 .structure-level-item-detail:before {content:""; display:block; position:absolute; right:100%; height:2px; top:39px; background:#fff; width:230px}
 .structure-level-item-detail:after {content:""; display:block; width:0; height:0; position:absolute; left:-9px; top:31px; border-right:9px solid #fff; border-top:9px solid transparent; border-bottom:9px solid transparent}
+.structure-level-item-detail.to-bottom:before {top:auto; bottom:39px}
+.structure-level-item-detail.to-bottom:after {top:auto; bottom:31px}
 .structure-level .structure-level .structure-level-item-detail:before {top:30px; width:283px}
 .structure-level .structure-level .structure-level .structure-level-item-detail:before {width:207px}
 .structure-level .structure-level .structure-level .structure-level .structure-level-item-detail:before {width:130px}
 .structure-level .structure-level .structure-level-item-detail:after {top:22px}
+.structure-level .structure-level .structure-level-item-detail.to-bottom:before {top:auto; bottom:30px}
+.structure-level .structure-level .structure-level-item-detail.to-bottom:after {top:auto; bottom:22px}
 .structure-level-item-detail h2 {color:#01426a; text-transform:none}
 .structure-level-item-detail h2:first-child {margin-top:5px}
-.structure-level-item-detail-inner {position:relative; max-height:400px; overflow:hidden}
+.structure-level-item-detail-inner {position:relative; width:100%; max-height:400px; overflow:hidden}
 .structure-level-item-detail-text {padding:0 20px 0 0}
 
-.structure-employee {border-top:1px solid #f1f3f4; padding:22px 0 21px 0; margin:0 16px 0 0}
+.structure-employee {border-top:1px solid #f1f3f4; padding:22px 0 21px 0; margin:0 16px 0 0; position:relative; overflow:hidden}
 .structure-employee:first-child {border-top:none; padding-top:0}
 .structure-employee:last-child {padding-bottom:0}
-.structure-employee:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .structure-employee-photo {float:left; width:55px; line-height:0}
 .structure-employee-photo img {border-radius:28px}
 .structure-employee-messages {float:right; width:40px; padding:6px 0 0 0}
@@ -908,6 +906,7 @@ footer {height:200px; min-width:480px; max-width:670px; position:relative; margi
     .structure-level-item-count {width:auto}
     .structure-level-item-detail {width:100%; box-sizing:border-box; border-left:80px solid #01426a}
     .structure-level-item.view .structure-level-item-detail {top:100%}
+    .structure-level-item.view .structure-level-item-detail.to-bottom {top:auto; bottom:100%}
     .structure-level-item-detail:before {display:none}
     .structure-level-item-detail:after {display:none}
     .structure-level .structure-level .structure-level-item-detail {border-left:none; width:480px}
@@ -1082,6 +1081,7 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 .profile .form-submit {float:left; width:170px; margin:0 0 0 -20px}
 .profile .form-submit input {font-size:16px}
 .btn-cancel {float:right; border:none; margin:0 -20px 0 0}
+.btn-cancel:hover {background:transparent; color:#fff}
 
 @media (max-width:1199px) {
     .profile form {margin:0}

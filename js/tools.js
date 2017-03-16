@@ -88,9 +88,7 @@
         });
         resizeStructure();
 
-        $('.structure-level-item-detail-inner').jScrollPane({
-            autoReinitialise: true
-        });
+        $('.structure-level-item-detail-inner').jScrollPane();
 
         $('.structure-level-item').click(function() {
             var curItem = $(this);
@@ -98,6 +96,12 @@
                 if (!curItem.hasClass('view')) {
                     $('.structure-level-item.view').removeClass('view');
                     curItem.addClass('view');
+
+                    var curDetail = curItem.find('.structure-level-item-detail');
+                    curDetail.removeClass('bottom');
+                    if (curDetail.offset().top + curDetail.outerHeight() > $('.wrapper').height()) {
+                        curDetail.addClass('to-bottom');
+                    }
                 } else {
                     curItem.removeClass('view');
                 }
