@@ -663,7 +663,7 @@ footer {height:200px; min-width:480px; max-width:670px; position:relative; margi
 .copyrights {text-align:center; letter-spacing:1px; padding:21px 0 0 0}
 
 @media (max-width:1199px) {
-    footer {padding:0 25px}
+    footer {padding:0 25px; box-sizing:border-box}
     .footer-about {padding-left:50px; padding-right:50px; font-size:11px}
     .footer-about span {display:none}
     .footer-nav {border-left:none}
@@ -1665,4 +1665,17 @@ h1+.btn-edit {margin:-8px 0 0 52px}
 @media (max-width:1199px) {
     .search-page-result-title {font-size:21px}
     .search-page-result {font-size:16px}
+}
+
+.media-files {font-size:0; line-height:0; letter-spacing:-1px; margin:0 -40px; padding:34px 0 33px 0}
+.media-file {display:inline-block; vertical-align:top; width:33.33%; box-sizing:border-box; padding:43px 40px 0 40px; text-align:center}
+.media-file a {display:inline-block; vertical-align:top; text-decoration:none}
+.media-file-icon {margin:0 auto; width:63px; height:75px; background:url(../images/media-file-icon.png); color:#fff; font:14px/89px MinionPro, serif; text-transform:uppercase; letter-spacing:0}
+.media-file a:hover .media-file-icon {background-position:left -75px; color:#cae5f1}
+.media-file-title {font:18px/20px MinionPro, serif; letter-spacing:0; color:#fff; transition:color .3s ease; padding:22px 0 0 0}
+.media-file a:hover .media-file-title {color:#cae5f1; text-decoration:underline}
+.media-file-size {font-size:14px; line-height:20px; letter-spacing:0; color:#1ab2d2}
+
+@media (max-width:1199px) {
+    .media-file {width:50%}
 }
