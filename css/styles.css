@@ -671,11 +671,11 @@ footer {height:200px; min-width:480px; max-width:670px; position:relative; margi
     .footer-social {width:25%; box-sizing:border-box}
 }
 
-.auth {width:380px; margin:0 auto; padding:41px 0 104px 0}
+.auth {width:380px; margin:0 auto; position:relative}
 
-.logo-auth {line-height:0; text-align:center}
+.auth-copyrights {position:absolute; left:0; right:0; bottom:10px; text-align:center; letter-spacing:1px; color:#fefefe; font-size:10px; line-height:15px; text-transform:uppercase}
 
-.auth-title {text-align:center; text-transform:uppercase; color:#fff; font:36px/40px MinionPro, serif; padding:46px 0 37px 0}
+.logo-auth {line-height:0; text-align:center; padding:41px 0 0 0}
 
 .auth form {margin:0; padding:20px 39px 26px 39px; border:1px solid #fff; border-top:none; background:url(../images/auth-form.png) no-repeat center top}
 .auth .form-input input {border:none; border-bottom:1px solid #fff; border-radius:0; font-size:16px; color:#fff; padding-left:0; padding-right:0}
@@ -683,7 +683,7 @@ footer {height:200px; min-width:480px; max-width:670px; position:relative; margi
 .auth .form-checkbox span {border-radius:0; border-color:#fff}
 .auth .form-submit {margin-top:40px}
 .auth .form-submit input {border-color:#fff}
-.auth-forget-link {text-align:center; font-size:16px; padding:29px 0 0 0}
+.auth-forget-link {text-align:center; font-size:16px; padding:29px 0 50px 0}
 .auth-forget-link a {color:#fff; text-decoration:underline}
 .auth-forget-link a:hover {text-decoration:none}
 

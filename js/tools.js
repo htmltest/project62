@@ -482,6 +482,15 @@
             });
         });
 
+        $('.auth').each(function() {
+            $(this).height($(window).height());
+            var curTop = ($(window).height() - $('.logo-auth').outerHeight() - $('.auth-forget-link').outerHeight() - $('.auth-copyrights').outerHeight() - $('.auth form').outerHeight()) / 2;
+            if (curTop < 0) {
+                curTop = 50;
+            }
+            $('.auth form').css({'margin-top': curTop + 'px'});
+        });
+
     });
 
 })(jQuery);
