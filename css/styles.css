@@ -673,6 +673,10 @@ footer {height:200px; min-width:480px; max-width:670px; position:relative; margi
 
 .auth {width:380px; margin:0 auto; position:relative}
 
+@media (max-width:1199px) {
+    .auth {height:auto !important}
+}
+
 .auth-copyrights {position:absolute; left:0; right:0; bottom:10px; text-align:center; letter-spacing:1px; color:#fefefe; font-size:10px; line-height:15px; text-transform:uppercase}
 
 .logo-auth {line-height:0; text-align:center; padding:41px 0 0 0}
