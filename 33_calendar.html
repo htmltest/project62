@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Tashir</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,700,700italic&amp;subset=latin,cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" />
+        <link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-thumbs.css" />
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/jquery.textarea.autoresize.js"></script>
+        <script src="js/fancybox/jquery.fancybox.js"></script>
+        <script src="js/fancybox/helpers/jquery.fancybox-media.js"></script>
+        <script src="js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="header-inner">
+                        <div class="logo"><a href="#"><img src="images/logo.svg" alt="" width="206" height="53" /></a></div>
+
+                        <nav>
+                            <ul>
+                                <li><a href="#">Сотрудники,<br />телефоны</a></li>
+                                <li><a href="#">Организационная<br />структура</a></li>
+                                <li><a href="#">Материалы, веб-ресурсы,<br />медиа-архив</a></li>
+                                <li><a href="#">Каталог<br />подрядчиков</a></li>
+                            </ul>
+                        </nav>
+                        <div class="menu-add">
+                            <a href="#" class="menu-add-link"></a>
+                            <ul>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">ЗАявки в Сервисные службы</a></li>
+                                <li><a href="#">Анкетирование</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="menu-mobile-link"></a>
+
+                        <div class="menu-mobile">
+                            <ul>
+                                <li><a href="#"><span><img src="images/menu-icon-1.png" alt="" width="26" height="33" /></span>новости</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-2.png" alt="" width="33" height="30" /></span>Сотрудники, телефоны</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-3.png" alt="" width="40" height="31" /></span>Организационная структура</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-4.png" alt="" width="36" height="31" /></span>Материалы, веб-ресурсы, медиа-архив</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-5.png" alt="" width="27" height="30" /></span>Заявки в сервисные службы</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-6.png" alt="" width="29" height="29" /></span>Анкетирование</a></li>
+                                <li><a href="#"><span><img src="images/menu-icon-7.png" alt="" width="34" height="30" /></span>Доска объявлений</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-user-menu">
+                            <a href="#" class="header-user-menu-link"><img src="files/avatar.jpg" alt="" width="38" height="38" /></a>
+                            <ul>
+                                <li><a href="#"><span>Профиль</span></a></li>
+                                <li><a href="#"><span>Сообщения</span> <em>5</em></a></li>
+                                <li><a href="#"><span>Выход</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-messages-link"><a href="#"><span>5</span></a></div>
+
+                        <a href="#" class="menu-user-mobile-link"><span>5</span></a>
+
+                        <div class="menu-user-mobile">
+                            <ul>
+                                <li><a href="#"><span><img src="images/menu-user-icon-1.png" alt="" width="29" height="27" /></span>Профиль</a></li>
+                                <li><a href="#"><span><img src="images/menu-user-icon-2.png" alt="" width="34" height="30" /></span>Сообщения</a></li>
+                                <li><a href="#"><span><img src="images/menu-user-icon-3.png" alt="" width="23" height="25" /></span>Выход</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="search">
+                    <div class="search-inner">
+                        <form action="files/search-results.html" method="post">
+                            <div class="search-submit"><input type="submit" value="" /></div>
+                            <a href="#" class="search-close"></a>
+                            <div class="search-input"><input type="text" name="search" value="" placeholder="Поиск" class="required" /></div>
+                            <div class="search-results">
+                                <div class="search-results-list"></div>
+                                <div class="search-results-all"><a href="#">Все результаты</a></div>
+                                <div class="search-results-loading"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--  dashboard -->
+                <div class="dashboard">
+
+                    <!-- calendar -->
+                    <div class="calendar">
+                        <h2>Календарь событий</h2>
+                        <div class="calendar-month">
+                            <div class="calendar-month-current">Январь 2017</div>
+                            <div class="calendar-month-prev"><a href="#">Декабрь<span> 2016</span></a></div>
+                            <div class="calendar-month-next"><a href="#">Февраль<span> 2017</span></a></div>
+                        </div>
+                        <div class="calendar-list calendar-list-page">
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">1</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details.html">Группа компаний «Ташир» среди лидеров...</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more.html">+ ещё 1</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">2</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details.html">Группа компаний «Ташир» среди лидеров...</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more.html">+ ещё 1</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">3</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details.html">Группа компаний «Ташир» среди лидеров...</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more.html">+ ещё 1</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">4</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details.html">Группа компаний «Ташир» среди лидеров...</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more.html">+ ещё 1</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">5</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details.html">Группа компаний «Ташир» среди лидеров...</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more.html">+ ещё 1</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">6</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details.html">Группа компаний «Ташир» среди лидеров...</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more.html">+ ещё 1</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">7</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details.html">Группа компаний «Ташир» среди лидеров...</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more.html">+ ещё 1</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">8</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details.html">«Ташир» присоединился к акции по спасению амурских тигров</a></div>
+                                        <div class="calendar-item-link"><a href="files/calendar-details-birthday.html">День рождения Ильяева Андрея (35 лет)</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">9</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">10</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">11</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details-birthday.html">День рождения Ильяева Андрея (35 лет)</a></div>
+                                        <div class="calendar-item-link"><a href="files/calendar-details-birthday.html">День рождения Ильяева Андрея (35 лет)</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">12</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">13</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">14</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">15</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">16</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">17</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">18</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">19</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">20</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">21</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link"><a href="files/calendar-details.html">«Ташир» - Генеральный партнер Московского...</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more.html">+ ещё 1</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">22</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">23</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">24</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">25</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link birthday"><a href="files/calendar-details-birthday.html">День рождения Василия Петрова (35 лет)</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more-scroll.html">+ ещё 2</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">26</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">27</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link birthday"><a href="files/calendar-details-birthday.html">День рождения Саркиса Карапетяна (30 лет)</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">28</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">29</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">30</div>
+                                </div>
+                            </div>
+                            <div class="calendar-item active">
+                                <div class="calendar-item-inner">
+                                    <div class="calendar-item-day">31</div>
+                                    <div class="calendar-item-content">
+                                        <div class="calendar-item-link birthday"><a href="files/calendar-details-birthday.html">День рождения Василия Петрова (35 лет)</a></div>
+                                        <div class="calendar-item-more"><a href="files/calendar-more-scroll.html">+ ещё 2</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-item disable">
+                                <div class="calendar-item-inner">
+                                </div>
+                            </div>
+                            <div class="calendar-item disable">
+                                <div class="calendar-item-inner">
+                                </div>
+                            </div>
+                            <div class="calendar-item disable">
+                                <div class="calendar-item-inner">
+                                </div>
+                            </div>
+                            <div class="calendar-item disable">
+                                <div class="calendar-item-inner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- calendar END -->
+
+                </div>
+                <!-- dashboard END -->
+
+            </div>
+            <!-- wrapper inner END -->
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="footer-about">«ТАШИР» - многопрофильная группа компаний федерального масштаба<span>,<br />объединяющая более 200 компаний в различных секторах экономики Российской Федерации</span></div>
+            <div class="footer-nav">
+                <ul class="footer-menu">
+                    <li><a href="#">Сотрудники</a></li>
+                    <li><a href="#">Структура</a></li>
+                    <li><a href="#">Медиа-архив</a></li>
+                    <li><a href="#">Подрядчики</a></li>
+                </ul>
+                <div class="footer-social"><a href="#"><img src="images/footer-facebook.png" alt="" /></a></div>
+                <div class="footer-social"><a href="#"><img src="images/footer-youtube.png" alt="" /></a></div>
+                <div class="footer-social"><a href="#"><img src="images/footer-in.png" alt="" /></a></div>
+                <div class="footer-social"><a href="#"><img src="images/footer-flickr.png" alt="" /></a></div>
+            </div>
+            <div class="copyrights">© 1999–2016 TASHIR Все права защищены</div>
+        </footer>
+
+    </body>
+</html>
