@@ -632,10 +632,17 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .calendar-item.active .calendar-item-day {color:#fff; font-weight:bold}
 .calendar-item-content {position:absolute; left:0; bottom:0; width:100%; box-sizing:border-box; font-size:11px; line-height:12px; padding:0 5px 0 25px; font-weight:300}
 .calendar-list-page .calendar-item-content {bottom:auto; top:36px}
-.calendar-item-link {position:relative; padding:0 0 8px 0}
-.calendar-item-link:before {content:""; display:block; width:8px; height:8px; position:absolute; left:-14px; top:2px; background:#0090ae; border-radius:4px}
-.calendar-item-link.birthday:before {background:#af76c5}
-.calendar-item-link > a {color:#fff}
+.calendar-item-link {position:relative; padding:0 0 8px 0; white-space:nowrap}
+.calendar-item-link:before {content:""; display:block; width:8px; height:8px; position:absolute; left:-14px; top:2px; background:#0093b2; border-radius:4px}
+.calendar-item-link.birthday:before {background:#a77bca}
+.calendar-item-link.other:before {background:#00bfb3}
+.calendar-item-link+.calendar-item-link+.calendar-item-link {display:none}
+.calendar-item.have-more .calendar-item-link+.calendar-item-link {display:none}
+.calendar-list-page .calendar-item.have-more .calendar-item-link+.calendar-item-link {display:block}
+.calendar-list-page .calendar-item-link+.calendar-item-link+.calendar-item-link {display:block}
+.calendar-list-page .calendar-item-link+.calendar-item-link+.calendar-item-link+.calendar-item-link+.calendar-item-link+.calendar-item-link+.calendar-item-link {display:none}
+.calendar-list-page .calendar-item.have-more .calendar-item-link+.calendar-item-link+.calendar-item-link+.calendar-item-link+.calendar-item-link+.calendar-item-link {display:none}
+.calendar-item-link > a {color:#fff; position:relative; overflow:hidden; text-overflow:ellipsis; display:inline-block; vertical-align:top; width:100%}
 .calendar-item-more {padding:2px 0 8px 0}
 .calendar-item-more > a {color:#0090ae}
 
@@ -653,6 +660,10 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
     .calendar-item-link:before {display:none}
     .calendar-item-link {border:1px solid #0090ae; border-radius:3px; padding:2px 5px 4px 5px; margin:0 0 2px 0; white-space:nowrap; position:relative; overflow:hidden; text-overflow:ellipsis}
     .calendar-item-more {padding:0 0 2px 6px}
+    .calendar-item-link+.calendar-item-link+.calendar-item-link {display:block}
+    .calendar-item-link+.calendar-item-link+.calendar-item-link+.calendar-item-link {display:none}
+    .calendar-list-page .calendar-item-link+.calendar-item-link+.calendar-item-link+.calendar-item-link {display:none}
+    .calendar-list-page .calendar-item.have-more .calendar-item-link+.calendar-item-link+.calendar-item-link {display:none}
 }
 
 .calendar-more {opacity:0; position:absolute; left:0; top:0; width:320px; background:rgba(248, 248, 248, .95); z-index:99; transform:translateY(-40px); transition:opacity .3s 0s, transform .3s 0s}
@@ -671,7 +682,9 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .calendar-more-list-inner {max-height:220px; position:relative; overflow:auto}
 .calendar-more-list-item {font-size:15px; line-height:20px; font-weight:300; padding:0 20px 0 17px; margin:20px 0 0 0; position:relative}
 .calendar-more-list-item:first-child {margin-top:0}
-.calendar-more-list-item:before {content:""; display:block; width:8px; height:8px; background:#0090ae; border-radius:50%; position:absolute; left:0; top:6px}
+.calendar-more-list-item:before {content:""; display:block; width:8px; height:8px; background:#0093b2; border-radius:50%; position:absolute; left:0; top:6px}
+.calendar-more-list-item.birthday:before {background:#a77bca}
+.calendar-more-list-item.other:before {background:#00bfb3}
 .calendar-more-list-item a {color:#01426a}
 .calendar-more-list .jspVerticalBar {width:5px}
 .calendar-more-list .jspTrack {background:#f8f8f8}

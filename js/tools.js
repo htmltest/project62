@@ -393,25 +393,57 @@
             e.preventDefault();
         });
 
+        $(window).on('load resize', function() {
+            $('.calendar-list').each(function() {
+                var curList = $(this);
+                curList.find('.calendar-item').each(function() {
+                    var curItem = $(this);
+                    curItem.removeClass('have-more');
+                    curItem.find('.calendar-item-more').remove();
+                    var curLinksMore = curItem.find('.calendar-item-link:hidden').length;
+                    if (curLinksMore > 0) {
+                        curItem.addClass('have-more');
+                        var curLinks = curItem.find('.calendar-item-link').length;
+                        curItem.find('.calendar-item-content').append('<div class="calendar-item-more"><a href="#">+ ещё ' + (curLinksMore + 1) + '</a></div>');
+                    }
+                });
+            });
+        });
+
         $('body').on('click', '.calendar-item-more a', function(e) {
+            $('.calendar-more').remove();
             var curLink = $(this);
             var curItem = curLink.parents().filter('.calendar-item');
-            $.ajax({
-                type: 'POST',
-                url: curLink.attr('href'),
-                dataType: 'html',
-                cache: false
-            }).done(function(html) {
-                $('.calendar-more').remove();
-                curItem.append(html);
-                if ($(window).width() < 1200) {
-                    $('.calendar-more').css({'margin-top': (curItem.offset().top - $('.calendar-list').offset().top) + 'px'});
+            var newHTML =   '<div class="calendar-more">' +
+                                '<div class="calendar-more-date">' + curItem.find('.calendar-item-day').data('fulldate') + '</div>' +
+                                '<div class="calendar-more-list">' +
+                                    '<div class="calendar-more-list-inner">';
+
+            curItem.find('.calendar-item-link a').each(function() {
+                var itemLink = $(this);
+                var hasBirthday = '';
+                if (itemLink.parent().hasClass('birthday')) {
+                    hasBirthday = ' birthday';
                 }
-                $('.calendar-more-list-inner').jScrollPane({
-                    autoReinitialise: true
-                });
-                curItem.find('.calendar-more').addClass('active');
+                var hasOther = '';
+                if (itemLink.parent().hasClass('other')) {
+                    hasOther = ' other';
+                }
+                newHTML +=              '<div class="calendar-more-list-item' + hasBirthday + hasOther + '"><a href="' + itemLink.attr('href') + '">' + itemLink.html() + '</a></div>';
             });
+
+            newHTML +=              '</div>' +
+                                '</div>' +
+                                '<a href="#" class="calendar-more-close"></a>' +
+                            '</div>';
+            curItem.append(newHTML);
+            if ($(window).width() < 1200) {
+                $('.calendar-more').css({'margin-top': (curItem.offset().top - $('.calendar-list').offset().top) + 'px'});
+            }
+            $('.calendar-more-list-inner').jScrollPane({
+                autoReinitialise: true
+            });
+            curItem.find('.calendar-more').addClass('active');
             e.preventDefault();
         });
 
@@ -464,7 +496,7 @@
         });
 
         $(document).click(function(e) {
-            if ($(e.target).parents().filter('.calendar-more').length == 0) {
+            if ($(e.target).parents().filter('.calendar-more').length == 0 && !$(e.target).parent().hasClass('calendar-item-more')) {
                 $('.calendar-more').remove();
             }
         });
