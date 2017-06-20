@@ -394,20 +394,7 @@
         });
 
         $(window).on('load resize', function() {
-            $('.calendar-list').each(function() {
-                var curList = $(this);
-                curList.find('.calendar-item').each(function() {
-                    var curItem = $(this);
-                    curItem.removeClass('have-more');
-                    curItem.find('.calendar-item-more').remove();
-                    var curLinksMore = curItem.find('.calendar-item-link:hidden').length;
-                    if (curLinksMore > 0) {
-                        curItem.addClass('have-more');
-                        var curLinks = curItem.find('.calendar-item-link').length;
-                        curItem.find('.calendar-item-content').append('<div class="calendar-item-more"><a href="#">+ ещё ' + (curLinksMore + 1) + '</a></div>');
-                    }
-                });
-            });
+            updateCalendarMore();
         });
 
         $('body').on('click', '.calendar-item-more a', function(e) {
@@ -612,3 +599,20 @@
     });
 
 })(jQuery);
+
+function updateCalendarMore() {
+    $('.calendar-list').each(function() {
+        var curList = $(this);
+        curList.find('.calendar-item').each(function() {
+            var curItem = $(this);
+            curItem.removeClass('have-more');
+            curItem.find('.calendar-item-more').remove();
+            var curLinksMore = curItem.find('.calendar-item-link:hidden').length;
+            if (curLinksMore > 0) {
+                curItem.addClass('have-more');
+                var curLinks = curItem.find('.calendar-item-link').length;
+                curItem.find('.calendar-item-content').append('<div class="calendar-item-more"><a href="#">+ ещё ' + (curLinksMore + 1) + '</a></div>');
+            }
+        });
+    });
+}
