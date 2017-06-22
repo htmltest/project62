@@ -437,6 +437,11 @@
         $('body').on('click', '.calendar-item-link a', function(e) {
             var curLink = $(this);
             var curItem = curLink.parents().filter('.calendar-item');
+
+            $('.calendar-more').remove();
+            curItem.append('<div class="calendar-more calendar-more-text"><div class="calendar-more-loading"><div class="loading" style="display:block"></div></div><a href="#" class="calendar-more-close"></a></div>');
+            positionCalendarText(curItem, curLink);
+
             $.ajax({
                 type: 'POST',
                 url: curLink.attr('href'),
@@ -469,6 +474,11 @@
         $('body').on('click', '.calendar-more-list-item a', function(e) {
             var curLink = $(this);
             var curItem = curLink.parents().filter('.calendar-item');
+
+            curItem.find('.calendar-more-text').remove();
+            curItem.append('<div class="calendar-more calendar-more-text"><div class="calendar-more-loading"><div class="loading" style="display:block"></div></div><a href="#" class="calendar-more-close"></a></div>');
+            positionCalendarText(curItem, curLink);
+
             $.ajax({
                 type: 'POST',
                 url: curLink.attr('href'),
@@ -483,7 +493,7 @@
         });
 
         $(document).click(function(e) {
-            if ($(e.target).parents().filter('.calendar-more').length == 0 && !$(e.target).parent().hasClass('calendar-item-more')) {
+            if ($(e.target).parents().filter('.calendar-more').length == 0 && !$(e.target).parent().hasClass('calendar-item-more') && !$(e.target).parent().hasClass('calendar-item-link')) {
                 $('.calendar-more').remove();
             }
         });

@@ -607,7 +607,8 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
     .news-item-title {padding-top:0}
 }
 
-.calendar {margin:20px -15px 80px -15px}
+.calendar {margin:20px -15px 80px -15px; position:relative}
+.calendar .loading {height:auto; bottom:0; top:99px}
 .calendar h2 {margin:0 0 57px 0; color:#fff; font-size:38px; line-height:42px; text-align:center}
 .calendar-month {position:relative; background:rgba(255, 255, 255, .05)}
 .calendar-month-current {text-align:center; color:#fff; text-transform:uppercase; font:21px/60px MinionPro, serif}
@@ -698,6 +699,8 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 .calendar-more-details-link {padding:33px 0 6px 0}
 .calendar-more-details-link .btn {border-color:#01426a; color:#01426a; line-height:40px}
 .calendar-more-details-link .btn:hover {background:#01426a; color:#fff}
+
+.calendar-more-loading {height:100px}
 
 @media (max-width:1199px) {
     .calendar-more {right:0; width:auto}
