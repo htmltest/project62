@@ -668,7 +668,7 @@ a.dashboard-summ-list-item-wrap:hover .dashboard-summ-list-name {color:#cae5f1; 
 }
 
 .calendar-more {opacity:0; position:absolute; left:0; top:0; width:320px; background:rgba(248, 248, 248, .95); z-index:99; transform:translateY(-40px); transition:opacity .3s 0s, transform .3s 0s}
-.calendar-more .loading {height:auto; bottom:0; top:0; background-color:rgba(0, 0, 0, .9)}
+.calendar-more .loading {height:auto; bottom:0; top:0; background-color:transparent}
 .calendar-more.active {opacity:1; transform:translateY(0)}
 .calendar-more+.calendar-more {left:-140px}
 .calendar-item:nth-child(7n) .calendar-more,
