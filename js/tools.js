@@ -99,7 +99,7 @@
 
                     var curDetail = curItem.find('.structure-level-item-detail');
                     curDetail.removeClass('bottom');
-                    if (curDetail.offset().top + curDetail.outerHeight() > $('.wrapper').height()) {
+                    if (curDetail.offset().top + curDetail.outerHeight() > $('.wrapper').height() - $('footer').height()) {
                         curDetail.addClass('to-bottom');
                     }
                 } else {
@@ -272,6 +272,7 @@
             } else {
                 curGroup.find('.contractors-filter-group-sub input').prop('checked', false);
             }
+            curInput.parents('form').submit();
         });
 
         $('.contractors-filter-group-sub input').change(function() {
@@ -284,6 +285,7 @@
                     curGroup.find('.contractors-filter-group-title input').prop('checked', true);
                 }
             }
+            curInput.parents('form').submit();
         });
 
         $('.contractors-item-detail-link').click(function(e) {
